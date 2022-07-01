@@ -395,3 +395,6 @@ dist
 *.code-workspace
 
 # End of https://www.toptal.com/developers/gitignore/api/maven,java,angular,node,eclipse,intellij+all,visualstudiocode
+jaci.tienda-model/src/main/db/templateDB.properties
+jaci.tienda-model/src/main/db/templateDB.lck
+jaci.tienda-model/src/main/db/PostgreSQL.lck
