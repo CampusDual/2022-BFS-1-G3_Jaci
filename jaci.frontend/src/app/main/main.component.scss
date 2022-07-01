@@ -1,1 +1,27 @@
 /* You can add main module styles to this file */
+@import url('https://fonts.cdnfonts.com/css/ds-digital');
+
+o-app-layout-header{
+  padding-left: 5%;
+  font-family: 'DS-Digital', sans-serif;
+  color: #eceff1;
+  opacity: 1;
+  text-align: center;
+  text-shadow: 0 0 1.5rem rgba(0,0,255,0.3);
+}
+
+o-app-layout{
+  margin-left: 5%;
+}
+
+#time{
+  margin-left: 10%;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#date{
+  font-size: 1rem;
+}
+
+
