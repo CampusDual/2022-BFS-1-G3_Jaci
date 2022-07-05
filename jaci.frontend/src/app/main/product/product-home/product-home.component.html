@@ -1,0 +1,10 @@
+<div fxFill fxLayout="column" fxLayoutAlign="start">
+    <o-table attr="productTable" service="products" entity="product" keys="ID" 
+      columns="ID;DESCRIPTION;STOCK;PRICE;EMPLOYEE_ID"
+      visible-columns="ID;DESCRIPTION;STOCK;PRICE" query-rows="20">
+      <o-table-column attr="ID" title="ID" width="100px"></o-table-column>
+      <o-table-column attr="DESCRIPTION" title="DESCRIPTION" width="900px"></o-table-column>
+      <o-table-column attr="STOCK" title="STOCK" width="200px"></o-table-column>
+      <o-table-column attr="PRICE" title="PRICE" width="200px"></o-table-column>
+    </o-table>
+</div>
