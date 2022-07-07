@@ -63,7 +63,7 @@ server:
 spring:
    datasource:
       driver-class-name: org.hsqldb.jdbcDriver
-      jdbc-url: jdbc:hsqldb:hsql://localhost:9013/templateDB
+      jdbc-url: jdbc:hsqldb:hsql://localhost:9014/templateDB
       username: SA
       password:
       initial-size: 10

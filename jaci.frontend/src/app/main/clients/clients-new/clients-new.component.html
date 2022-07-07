@@ -1,0 +1,21 @@
+<o-form service="clients" entity="clients" keys="ID" header-actions="R;I;U;D" show-header-navigation="no">
+  <o-text-input attr="ID" sql-type="INTEGER" enabled="no"></o-text-input>
+  <o-row>
+    <o-column title-label="CLIENT_INFORMATION" fxFlex>
+      <o-row>
+        <o-text-input class="input-padding" attr="NAME" fxFlex="30" required="yes"></o-text-input>
+        <o-text-input class="input-padding" attr="SURNAME1" fxFlex="35" required="yes"></o-text-input>
+        <o-text-input class="input-padding" attr="SURNAME2" fxFlex="35" required="yes"></o-text-input>
+      </o-row>
+      <o-row>
+        <o-email-input attr="EMAIL" fxFlex></o-email-input>
+      </o-row>
+      <o-row>
+        <o-text-input attr="BANK_CCOUNT" class="input-padding" step="0" grouping="no" fxFlex="100"></o-text-input>
+      </o-row>
+      <o-row>
+        <o-text-input attr="CREDIT_NUMBER" class="input-padding" step="0" grouping="no" fxFlex="100"></o-text-input>
+      </o-row>
+    </o-column>
+  </o-row>
+</o-form>
