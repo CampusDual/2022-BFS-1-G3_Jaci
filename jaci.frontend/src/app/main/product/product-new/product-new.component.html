@@ -1,0 +1,14 @@
+<o-form service="products" entity="product" keys="ID" header-actions="R;I;U;D" show-header-navigation="no">
+    <o-text-input attr="ID" sql-type="INTEGER" enabled="no"></o-text-input>
+    <o-row>
+      <o-column title-label="PRODUCT-NEW" fxFlex>
+        <o-row>
+          <o-textarea-input class="input-padding" attr="DESCRIPTION" fxFlex="40"></o-textarea-input>
+        
+          <o-text-input attr="STOCK" class="input-padding" fxFlex="40"></o-text-input>
+        
+          <o-real-input attr="PRICE" fxFlex></o-real-input>
+        </o-row>
+      </o-column>
+    </o-row>
+</o-form>
