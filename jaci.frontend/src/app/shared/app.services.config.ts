@@ -4,5 +4,7 @@ export const SERVICE_CONFIG: Object = {
   },
   'sales': {
     'path': '/sales'
+  'clients':{
+    'path':'/clients'
   }
 };
