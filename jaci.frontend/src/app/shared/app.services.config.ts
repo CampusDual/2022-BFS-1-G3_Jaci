@@ -4,8 +4,10 @@ export const SERVICE_CONFIG: Object = {
   },  
   'products':{
     'path': '/products'
+  },
   'sales': {
     'path': '/sales'
+  },
   'clients':{
     'path':'/clients'
   }
