@@ -1,0 +1,20 @@
+<o-form-layout-manager title="PRODUCTS" separator=" " mode="tab" label-columns="ID">
+  <o-column-collapsible title="FILTER" appearance="outline">
+    <o-row layout-align="end" layout-gap="20px">
+      <o-button (onClick)="applyFilter()" attr="APPLY_FILTER" label="STOCK LESS THAN 5" layout-padding></o-button>
+      <o-button (onClick)="clearFilter()" attr="CLEAR_FILTER" label="CLEAR FILTER" layout-padding></o-button>
+    </o-row>
+  </o-column-collapsible>
+  <!-- <o-filter-builder #filterBuilder attr="thefilter" filters="STOCK:STOCK" [target]="table" query-on-change="no" query-on-change-delay="500" [expression-builder]="createFilter"></o-filter-builder>
+  -->
+    <div fxFill fxLayout="column" fxLayoutAlign="start">
+    <o-table #table attr="productTable" sort-columns="ID:DESC" service="products" entity="{{entity}}" keys="ID" columns="ID;DESCRIPTION;STOCK;PRICE;ON_SALE" visible-columns="ID;DESCRIPTION;STOCK;PRICE;ON_SALE" query-rows="20" delete-button="no">
+      <o-table-context-menu delete="no"></o-table-context-menu>
+      <o-table-column attr="ID" title="ID" width="100px"></o-table-column>
+      <o-table-column attr="DESCRIPTION" title="DESCRIPTION" width="800px"></o-table-column>
+      <o-table-column attr="STOCK" title="STOCK" width="200px"></o-table-column>
+      <o-table-column attr="PRICE" title="PRICE" width="20px"></o-table-column>
+      <o-table-column attr="ON_SALE" title="ON SALE" width="60px"></o-table-column>
+    </o-table>
+  </div>
+</o-form-layout-manager>
