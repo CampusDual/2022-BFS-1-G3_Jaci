@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { OTextInputComponent, OUserInfoComponent } from 'ontimize-web-ngx';
 
 @Component({
   selector: 'app-product-new',
@@ -10,6 +11,7 @@ export class ProductNewComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }

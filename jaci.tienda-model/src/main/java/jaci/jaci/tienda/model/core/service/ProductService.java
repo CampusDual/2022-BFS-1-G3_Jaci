@@ -8,7 +8,6 @@ import jaci.jaci.tienda.model.core.dao.ProductDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Map;
 
@@ -39,5 +38,10 @@ public class ProductService implements IProductService {
     @Override
     public EntityResult productDelete(Map<?, ?> keyMap) throws OntimizeJEERuntimeException {
         return this.daoHelper.delete(this.productDao, keyMap);
+    }
+
+    @Override
+    public EntityResult lessProductQuery(Map<?, ?> keyMap, List<?> attrList) {
+        return this.daoHelper.query(this.productDao, keyMap, attrList, ProductDao.QUERY_LESS_THAN_5);
     }
 }

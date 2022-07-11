@@ -19,6 +19,11 @@ public class ProductDao extends OntimizeJdbcDaoSupport {
     public static final String ATTR_DESCRIPTION   = "DESCRIPTION";
     public static final String ATTR_STOCK         = "STOCK";
     public static final String ATTR_PRICE         = "PRICE";
-    public static final String ATTR_EMPLOYEE_ID   = "EMPLOYEE_ID";
+    public static final String ATTR_ON_SALE       = "ON_SALE";
+    public static final String QUERY_LESS_THAN_5   = "LESS_THAN_5";
+
+    public ProductDao() {
+        super();
+    }
 
 }

@@ -3,7 +3,7 @@
         xmlns="http://www.ontimize.com/schema/jdbc"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.ontimize.com/schema/jdbc http://www.ontimize.com/schema/jdbc/ontimize-jdbc-dao.xsd"
-        catalog="" schema="${mainschema}" table="PRODUCT"
+        catalog="" schema="${mainschema}" table="EMPLOYEE"
         datasource="mainDataSource" sqlhandler="dbSQLStatementHandler">
     <DeleteKeys>
         <Column>ID</Column>
@@ -12,18 +12,4 @@
         <Column>ID</Column>
     </UpdateKeys>
     <GeneratedKey>ID</GeneratedKey>
-    <Queries>
-        <Query id="LESS_THAN_5">
-            <Sentence>
-                <![CDATA[
-               SELECT
-                  #COLUMNS#
-               FROM
-                  STOCK_MENOR_5
-               #WHERE#
-               #ORDER#
-            ]]>
-            </Sentence>
-        </Query>
-    </Queries>
 </JdbcEntitySetup>

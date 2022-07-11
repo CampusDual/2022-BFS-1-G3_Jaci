@@ -13,5 +13,6 @@ public interface IProductService {
     public EntityResult productInsert(Map<?, ?> attrMap);
     public EntityResult productUpdate(Map<?, ?> attrMap, Map<?, ?> keyMap);
     public EntityResult productDelete(Map<?, ?> keyMap);
+    public EntityResult lessProductQuery(Map<?, ?> keyMap, List<?> attrList);
 
 }

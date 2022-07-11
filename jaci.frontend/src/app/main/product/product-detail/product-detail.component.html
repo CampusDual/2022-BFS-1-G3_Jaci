@@ -1,4 +1,4 @@
-<o-form service="products" entity="product" keys="ID" header-actions="R;U" show-header-navigation="no">
+<o-form #form service="products" entity="product" keys="ID" header-actions="R;U" show-header-navigation="no">
     <o-text-input attr="ID" sql-type="INTEGER" enabled="no"></o-text-input>
     <o-row>
       <o-column title-label="PRODUCT-DETAILS" fxFlex>
@@ -9,8 +9,16 @@
           <o-text-input attr="STOCK" class="input-padding" fxFlex="40" enabled="no"></o-text-input>
         </o-row>
         <o-row>
-          <o-real-input attr="PRICE" fxFlex required="yes"></o-real-input>
+          <o-currency-input attr="PRICE" label="Price" fxFlex="40" enabled="no"></o-currency-input>
         </o-row>
+      </o-column>
+    </o-row>
+    <o-row>
+      <o-column>
+        <o-button-toggle #toggle (onChange)="setSale()" attr="SET_SALE" label="ON SALE" layout-padding></o-button-toggle>
+      </o-column>
+      <o-column>
+        <o-integer-input attr="ON_SALE" style="display:none"></o-integer-input>
       </o-column>
     </o-row>
 </o-form>
