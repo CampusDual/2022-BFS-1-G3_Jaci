@@ -22,7 +22,7 @@
     overflow: auto;
 
     .login-bg-container {
-      background-image: url('^assets/images/login_bg.png');
+      background-image: url('^assets/images/JACI SHOP 1.1.png');
       width: calc(100% - 640px);
       background-repeat: no-repeat;
       background-size: cover;
@@ -40,8 +40,8 @@
       height: 100%;
       top: 0;
       left: 0;
-      background: rgba(0, 0, 0, .1);
-      opacity: .8;
+      background: rgb(255, 255, 255);
+      opacity: .0;
     }
 
     .wrapp-login {
@@ -80,10 +80,11 @@
           margin: 32px 0 0;
           height: 42px;
           font-size: 16px;
+          color: #b3b3b5;
         }
 
         .dark_text {
-          color: #c5c5c5;
+          color: #000000DE;
           font-size: 9pt;
         }
 

@@ -1,5 +1,82 @@
 /* You can add global styles to this file, and also import other style files */
-$primary: #1464a5;
+$primary: #b3b3b5;
 o-app-layout-header{
   background-color: $primary;
+}
+.o-app-sidenav .o-app-sidenav-sidenav {
+  background: #919296;
+}
+.o-app-sidenav .o-app-sidenav-sidenav .sidenav-toggle {
+  color: #000000;
+}
+.mat-menu-item .mat-icon-no-color, .mat-menu-item-submenu-trigger::after {
+  color: #000000;
+}
+.mat-menu-item {
+  font-family: Poppins, "Halimum", "Montserrat classic";
+  font-size: 14px;
+  font-weight: 400;
+}
+.mat-menu-item {
+  font-family: Poppins, "Halimum", "Montserrat classic";
+  font-size: 14px;
+  font-weight: 400;
+}
+Atributo style {
+  pointer-events: auto;
+  position: static;
+  background: #ffffff;
+}
+element.style {
+  flex-direction: row;
+  box-sizing: border-box;
+  display: flex;
+  place-content: stretch space-between;
+  align-items: stretch;
+  flex: 1 1 0%;
+  background: #b3b3b5;
+}
+.o-app-header nav {
+  background: #b3b3b5;
+}
+.full-page .login-outer-container .wrapp-login .login-inner-container button {
+  width: 100%;
+  margin: 32px 0 0;
+  height: 42px;
+  font-size: 16px;
+  opacity: .8;
+  background: #919296;
+}
+.mat-button, .mat-raised-button, .mat-icon-button, .mat-stroked-button, .mat-flat-button, .mat-fab, .mat-mini-fab {
+  font-family: Poppins, "Halimum", "Montserrat classic";
+  font-size: 14px;
+  font-weight: 500;
+}
+button, html, input, select, span, textarea {
+  font-family: Poppins, "Halimum", "Montserrat classic";
+  color: #000000;
+}
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background-color: transparent;
+  opacity: 1;
+}
+body, html {
+  background-color: #ffffff;
+}
+.mat-drawer-container {
+    background-color: #ffffff;
+    color: rgba(0, 0, 0, 0.87);
+}
+.o-app-sidenav .o-app-sidenav-container .mat-drawer.o-app-sidenav-sidenav nav a {
+  border-radius: 0;
+  box-sizing: border-box;
+  display: block;
+  line-height: 48px;
+  font-size: 14px;
+  color: #000000;
+}
+button, html, input, select, span, textarea {
+  font-family: Poppins, "Halimum", "Montserrat classic";
 }
