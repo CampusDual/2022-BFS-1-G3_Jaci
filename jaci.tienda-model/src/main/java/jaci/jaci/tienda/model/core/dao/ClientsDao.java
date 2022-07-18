@@ -16,7 +16,7 @@ public class ClientsDao extends OntimizeJdbcDaoSupport {
  public static final String ATTR_SURNAME1 ="SURNAME1";
  public static final String ATTR_SURNAME2 ="SURNAME2";
  public static final String ATTR_EMAIL ="EMAIL";
- public static final String ATTR_BANK_CCOUNT ="BANK_CCOUNT";
+ public static final String ATTR_BANK_CCOUNT ="BANK_ACCOUNT";
  public static final String QUERY_CREDIT_NUMBER = "CREDIT_NUMBER";
  public static final String QUERY_PASSWORD = "PASSWORD";
   
