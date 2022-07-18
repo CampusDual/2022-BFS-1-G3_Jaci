@@ -5,8 +5,6 @@
       <o-button (onClick)="clearFilter()" attr="CLEAR_FILTER" label="CLEAR FILTER" layout-padding></o-button>
     </o-row>
   </o-column-collapsible>
-  <!-- <o-filter-builder #filterBuilder attr="thefilter" filters="STOCK:STOCK" [target]="table" query-on-change="no" query-on-change-delay="500" [expression-builder]="createFilter"></o-filter-builder>
-  -->
     <div fxFill fxLayout="column" fxLayoutAlign="start">
     <o-table #table attr="productTable" sort-columns="ID:DESC" service="products" entity="{{entity}}" keys="ID" columns="NAME;ID;DESCRIPTION;STOCK;PRICE;ON_SALE" visible-columns="NAME;DESCRIPTION;STOCK;PRICE;ON_SALE" query-rows="20" delete-button="no">
       <o-table-context-menu delete="no"></o-table-context-menu>

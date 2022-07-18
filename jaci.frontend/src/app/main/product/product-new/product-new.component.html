@@ -1,7 +1,9 @@
-<o-form service="products" entity="product" keys="ID" header-actions="R;U" show-header-navigation="no">
-    <o-text-input attr="ID" sql-type="INTEGER" enabled="no"></o-text-input>
+<o-form service="products" entity="product" keys="ID" header-actions="R;U;" show-header-navigation="no">
     <o-row>
       <o-column title-label="PRODUCT-NEW" fxFlex>
+        <o-row>
+          <o-text-input class="input-padding" fxFlex="40" required="yes" attr="NAME" enabled="yes"></o-text-input>
+        </o-row>
         <o-row>
           <o-textarea-input class="input-padding" attr="DESCRIPTION" fxFlex="40" required="yes" enabled="yes"></o-textarea-input>
         </o-row>
