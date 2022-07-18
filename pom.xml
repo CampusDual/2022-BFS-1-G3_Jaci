@@ -1,374 +1,224 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-            
-  
-  
-  
-  <modelVersion>4.0.0</modelVersion>
-            
-  
-  
-  
-  <parent>
-                        
-    
-    
-    
-    <groupId>com.ontimize.boot</groupId>
-                        
-    
-    
-    
-    <artifactId>ontimize-boot-parent</artifactId>
-                        
-    
-    
-    
-    <version>3.8.1</version>
-                    
-  
-  
-  
-  </parent>
-            
-  
-  
-  
-  <groupId>jaci</groupId>
-            
-  
-  
-  
-  <artifactId>jaci.tienda</artifactId>
-            
-  
-  
-  
-  <version>0.0.1</version>
-            
-  
-  
-  
-  <packaging>pom</packaging>
-            
-  
-  
-  
-  <properties>
-                        
-    
-    
-    
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-                        
-    
-    
-    
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-                        
-    
-    
-    
-    <java.version>11</java.version>
-                        
-    
-    
-    
-    <hsqldatabase.path>src/main/db</hsqldatabase.path>
-                        
-    
-    
-    
-    <database.url>jdbc:hsqldb:hsql://localhost:9014/templateDB</database.url>
-                        
-    
-    
-    
-    <hsqldb.version>2.3.4</hsqldb.version>
-                        
-    
-    
-    
-    <spring-boot.repackage.skip>true</spring-boot.repackage.skip>
-                    
-  
-  
-  
-  </properties>
-            
-  
-  
-  
-  <dependencyManagement>
-                        
-    
-    
-    
-    <dependencies>
-                                    
-      
-      
-      
-      <dependency>
-                                                
-        
-        
-        
-        <groupId>org.springframework.boot</groupId>
-                                                
-        
-        
-        
-        <artifactId>spring-boot-starter-web</artifactId>
-                                            
-      
-      
-      
-      </dependency>
-                                    
-      
-      
-      
-      <dependency>
-                                                
-        
-        
-        
-        <groupId>jaci</groupId>
-                                                
-        
-        
-        
-        <artifactId>jaci.tienda-api</artifactId>
-                                                
-        
-        
-        
-        <version>0.0.1</version>
-                                            
-      
-      
-      
-      </dependency>
-                                    
-      
-      
-      
-      <dependency>
-                                                
-        
-        
-        
-        <groupId>jaci</groupId>
-                                                
-        
-        
-        
-        <artifactId>jaci.tienda-boot</artifactId>
-                                                
-        
-        
-        
-        <version>0.0.1</version>
-                                            
-      
-      
-      
-      </dependency>
-                                    
-      
-      
-      
-      <dependency>
-                                                
-        
-        
-        
-        <groupId>jaci</groupId>
-                                                
-        
-        
-        
-        <artifactId>jaci.tienda-model</artifactId>
-                                                
-        
-        
-        
-        <version>0.0.1</version>
-                                            
-      
-      
-      
-      </dependency>
-                                    
-            
-      
-      
-      
-      <dependency>
-                                                
-        
-        
-        
-        <groupId>jaci</groupId>
-                                                
-        
-        
-        
-        <artifactId>jaci.tienda-ws</artifactId>
-                                                
-        
-        
-        
-        <version>0.0.1</version>
-                                            
-      
-      
-      
-      </dependency>
-                                    
-      
-      
-      
-      <dependency>
-                                                
-        
-        
-        
-        <groupId>org.hsqldb</groupId>
-                                                
-        
-        
-        
-        <artifactId>hsqldb</artifactId>
-                                                
-        
-        
-        
-        <version>${hsqldb.version}</version>
-                                            
-      
-      
-      
-      </dependency>
-                                
-    
-    
-    
-    </dependencies>
-                    
-  
-  
-  
-  </dependencyManagement>
-                
-    
-  
-  
-  
-  <profiles>
-                        
-    
-    
-    
-    <profile>
-                                    
-      
-      
-      
-      <id>default</id>
-                                    
-      
-      
-      
-      <activation>
-                                                
-        
-        
-        
-        <activeByDefault>true</activeByDefault>
-                                            
-      
-      
-      
-      </activation>
-                                    
-      
-      
-      
-      <repositories>
-                                                
-        
-        
-        
-        <repository>
-                                                            
-          
-          
-          
-          <id>imatia-artifactory</id>
-                                                            
-          
-          
-          
-          <url>https://artifactory.imatia.com/public-artifactory/libs-release</url>
-                                                            
-          
-          
-          
-          <releases>
-                    </releases>
-                                                            
-          
-          
-          
-          <snapshots>
-                    </snapshots>
-                                                        
-        
-        
-        
-        </repository>
-                                            
-      
-      
-      
-      </repositories>
-                                
-    
-    
-    
-    </profile>
-                    
-  
-  
-  
-  </profiles>
-        
-  
-  
-  
-  <modules>
-                  
-    
-    
-    
-    <module>jaci.tienda-api</module>
-                  
-    
-    
-    
-    <module>jaci.tienda-model</module>
-              
-    
-    
-    <module>jaci.tienda-ws</module>
-          
-    
-    <module>jaci.tienda-boot</module>
-      
-  </modules>
-      
+
+
+	<modelVersion>4.0.0</modelVersion>
+
+
+	<parent>
+
+
+		<groupId>com.ontimize.boot</groupId>
+
+
+		<artifactId>ontimize-boot-parent</artifactId>
+
+
+		<version>3.8.1</version>
+
+
+	</parent>
+
+
+	<groupId>jaci</groupId>
+
+
+	<artifactId>jaci.tienda</artifactId>
+
+
+	<version>0.0.1</version>
+
+
+	<packaging>pom</packaging>
+
+
+	<properties>
+
+
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+
+		<java.version>11</java.version>
+
+
+		<hsqldatabase.path>src/main/db</hsqldatabase.path>
+
+
+		<database.url>jdbc:hsqldb:hsql://45.84.210.174:65432/Fullstack_2022_1_G3</database.url>
+
+
+		<hsqldb.version>2.3.4</hsqldb.version>
+		
+		<postgres.version>42.4.0</postgres.version>
+
+		<spring-boot.repackage.skip>true</spring-boot.repackage.skip>
+
+
+	</properties>
+
+
+	<dependencyManagement>
+
+
+		<dependencies>
+
+
+			<dependency>
+
+
+				<groupId>org.springframework.boot</groupId>
+
+
+				<artifactId>spring-boot-starter-web</artifactId>
+
+
+			</dependency>
+
+
+			<dependency>
+
+
+				<groupId>jaci</groupId>
+
+
+				<artifactId>jaci.tienda-api</artifactId>
+
+
+				<version>0.0.1</version>
+
+
+			</dependency>
+
+
+			<dependency>
+
+
+				<groupId>jaci</groupId>
+
+
+				<artifactId>jaci.tienda-boot</artifactId>
+
+
+				<version>0.0.1</version>
+
+
+			</dependency>
+
+
+			<dependency>
+
+
+				<groupId>jaci</groupId>
+
+
+				<artifactId>jaci.tienda-model</artifactId>
+
+
+				<version>0.0.1</version>
+
+
+			</dependency>
+
+
+			<dependency>
+
+
+				<groupId>jaci</groupId>
+
+
+				<artifactId>jaci.tienda-ws</artifactId>
+
+
+				<version>0.0.1</version>
+
+
+			</dependency>
+
+
+			<dependency>
+
+
+				<groupId>org.postgresql</groupId>
+
+				<artifactId>postgresql</artifactId>
+
+				<version>${postgres.version}</version>
+
+			</dependency>
+
+
+		</dependencies>
+
+
+	</dependencyManagement>
+
+
+	<profiles>
+
+
+		<profile>
+
+
+			<id>default</id>
+
+
+			<activation>
+
+
+				<activeByDefault>true</activeByDefault>
+
+
+			</activation>
+
+
+			<repositories>
+
+
+				<repository>
+
+
+					<id>imatia-artifactory</id>
+
+
+					<url>https://artifactory.imatia.com/public-artifactory/libs-release</url>
+
+
+					<releases></releases>
+
+
+					<snapshots></snapshots>
+
+
+				</repository>
+
+
+			</repositories>
+
+
+		</profile>
+
+
+	</profiles>
+
+
+	<modules>
+
+
+		<module>jaci.tienda-api</module>
+
+
+		<module>jaci.tienda-model</module>
+
+
+		<module>jaci.tienda-ws</module>
+
+
+		<module>jaci.tienda-boot</module>
+
+	</modules>
 
 
 </project>
