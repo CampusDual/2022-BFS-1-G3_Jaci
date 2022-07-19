@@ -6,12 +6,12 @@
         catalog="" schema="${mainschema}" table="PRODUCT"
         datasource="mainDataSource" sqlhandler="dbSQLStatementHandler">
     <DeleteKeys>
-        <Column>ID</Column>
+        <Column>id</Column>
     </DeleteKeys>
     <UpdateKeys>
-        <Column>ID</Column>
+        <Column>id</Column>
     </UpdateKeys>
-    <GeneratedKey>ID</GeneratedKey>
+    <GeneratedKey>id</GeneratedKey>
     <Queries>
         <Query id="LESS_THAN_5">
             <Sentence>
