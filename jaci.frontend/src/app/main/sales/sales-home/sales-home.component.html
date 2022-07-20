@@ -1,11 +1,11 @@
 <o-form show-header="no">
-  <o-column-collapsible title="{{ 'FILTERS_ACCOUNTS' | oTranslate }}" appearance="outline">
+  <o-column-collapsible title="{{ 'DATE FILTERS' | oTranslate }}" appearance="outline">
      <o-row layout-gap="18px">
         <o-column fxFlex="50" title="{{ 'STARTDATE' | oTranslate }}">
-           <o-date-input attr="startDate" label="INIT" read-only="no" required="no"></o-date-input>
+           <o-date-input attr="startDate" label="select init date" read-only="no" required="no"></o-date-input>
         </o-column>
         <o-column fxFlex="50" title="{{ 'ENDDATE' | oTranslate }}">
-           <o-date-input attr="endDate" label="END" read-only="no" required="no"></o-date-input>
+           <o-date-input attr="endDate" label="select end date" read-only="no" required="no"></o-date-input>
         </o-column>
      </o-row>
      <o-row layout-align="end" layout-gap="18px">
@@ -17,6 +17,12 @@
      </o-row>
   </o-column-collapsible>
 
+  <o-column-collapsible title="SALES BY CLIENT FILTER" appearance="outline">
+   <o-row layout-align="start" layout-gap="20px">
+     <!--<o-button (onClick)="salesFilter()" attr="SALES_FILTER" label="SALES BY CLIENT" layout-padding></o-button>-->
+   </o-row>
+ </o-column-collapsible>
+
   <o-filter-builder #filterBuilder attr="thefilter"
      filters="STARTDATE_I:startDate;STARTDATE_E:endDate" [target]="salesTable"
      query-on-change="no" query-on-change-delay="500" [expression-builder]="createFilter"></o-filter-builder>
@@ -25,7 +31,7 @@
 <div fxFill fxLayout="column" fxLayoutAlign="start">
   <o-table #salesTable fxFlex attr="salesTable" service="sales" entity="sales" keys="SALES_ID"
     columns="SALES_ID;QUANTITY;PRICE;TOTAL;CLIENT_ID;CLIENT_ID;DATE;IS_CONFIRM"
-    visible-columns="SALES_ID;QUANTITY;PRICE;TOTAL;PRODUCT_ID;CLIENT_ID;DATE;IS_CONFIRM" query-rows="10">
+    visible-columns="QUANTITY;PRICE;TOTAL;PRODUCT_ID;CLIENT_ID;DATE" query-rows="10">
     <o-table-column attr="SALES_ID" title="ID" width="50px"></o-table-column>
     <o-table-column attr="QUANTITY" title="QUANTITY" width="150px"></o-table-column>
     <o-table-column attr="PRICE" title="PRICE" width="100px"></o-table-column>

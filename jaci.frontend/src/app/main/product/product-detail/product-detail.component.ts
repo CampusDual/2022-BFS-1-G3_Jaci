@@ -23,7 +23,7 @@ export class ProductDetailComponent implements OnInit {
   }
 
   ngAfterViewChecked(){
-    if(this.form.getFieldValue("ON_SALE") == 1){
+    if(this.form.getFieldValue("ON_SALE") == true){
       this.toggle.checked = true;
     }
     else{
@@ -32,8 +32,7 @@ export class ProductDetailComponent implements OnInit {
   }
 
   setSale(){
-    this.form.getFieldValue("SALE");
-    if(this.form.getFieldValue("ON_SALE") == 1){
+    if(this.form.getFieldValue("ON_SALE") == true){
       this.form.setFieldValue("ON_SALE", 0);
     }
     else{
