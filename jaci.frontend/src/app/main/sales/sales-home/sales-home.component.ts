@@ -20,7 +20,7 @@ export class SalesHomeComponent implements OnInit {
    salesByClientClic(){
       let selected = this.table.getSelectedItems();
       if(selected.length === 1){
-         let clientId = selected[0]['CLIENT_ID'];
+         let clientId = selected[0]['client_id'];
          this.router.navigate(['main/sales/client/'+clientId]);
       }
       else{
