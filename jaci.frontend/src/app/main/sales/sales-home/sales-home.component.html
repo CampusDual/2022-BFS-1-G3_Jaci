@@ -20,19 +20,18 @@
      filters="STARTDATE_I:startDate;STARTDATE_E:endDate" [target]="salesTable"
      query-on-change="no" query-on-change-delay="500" [expression-builder]="createFilter"></o-filter-builder>
 <div fxFill fxLayout="column" fxLayoutAlign="start">
-  <o-table #salesTable fxFlex attr="salesTable" service="sales" entity="sales" keys="SALES_ID"
-    columns="SALES_ID;QUANTITY;PRICE;TOTAL;CLIENT_ID;CLIENT_ID;DATE;IS_CONFIRM"
-    visible-columns="QUANTITY;PRICE;TOTAL;PRODUCT_ID;CLIENT_ID;DATE" query-rows="10" delete-button="no">
-    <o-table-button icon = "shopping_bag" (onClick)="salesByClientClic()" attr="CLIENT_SALES" label="OPEN CLIENT SALES"></o-table-button>
+  <o-table #salesTable fxFlex attr="salesTable" service="sales" entity="sales" keys="sales_id"
+    columns="sales_id;quantity;price;total;product_id;client_id;client_id;date;is_confirm"
+    visible-columns="quantity;price;total;product_id;client_id;date" query-rows="10" delete-button="no">
     <o-table-context-menu delete="no"></o-table-context-menu>
-    <o-table-column attr="SALES_ID" title="ID" width="50px"></o-table-column>
-    <o-table-column attr="QUANTITY" title="QUANTITY" width="150px"></o-table-column>
-    <o-table-column attr="PRICE" title="PRICE" width="100px"></o-table-column>
-    <o-table-column attr="TOTAL" title="TOTAL" width="100px"></o-table-column>
-    <o-table-column attr="PRODUCT_ID" title="PRODUCT_ID" width="150px"></o-table-column>
-    <o-table-column attr="CLIENT_ID" title="CLIENT_ID" width="150px"></o-table-column>
-    <o-table-column attr="DATE" title="DATE" type="date" format="LL"></o-table-column>
-    <o-table-column attr="IS_CONFIRM" title="IS_CONFIRM" width="150px"></o-table-column>
+    <o-table-column attr="sales_id" title="ID" width="50px"></o-table-column>
+    <o-table-column attr="quantity" title="QUANTITY" width="150px"></o-table-column>
+    <o-table-column attr="price" title="PRICE" width="100px"></o-table-column>
+    <o-table-column attr="total" title="TOTAL" width="100px"></o-table-column>
+    <o-table-column attr="product_id" title="PRODUCT_ID" width="150px"></o-table-column>
+    <o-table-column attr="client_id" title="CLIENT_ID" width="150px"></o-table-column>
+    <o-table-column attr="date" title="DATE" type="date" format="LL"></o-table-column>
+    <o-table-column attr="is_confirm" title="IS_CONFIRM" width="150px"></o-table-column>
   </o-table>
   </div>
 </o-form>
