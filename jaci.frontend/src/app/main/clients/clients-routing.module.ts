@@ -15,7 +15,7 @@ const routes: Routes =  [{
   component: ClientsNewComponent
 },
 {
-  path: ":ID",
+  path: ":id",
   component: ClientsDetailComponent
 }];
 
