@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
-import { FilterExpressionUtils, Expression } from 'ontimize-web-ngx';
+import { FilterExpressionUtils, Expression, OTableComponent, DialogService } from 'ontimize-web-ngx';
 
 @Component({
    selector: 'app-sales-home',
@@ -9,10 +10,24 @@ import { FilterExpressionUtils, Expression } from 'ontimize-web-ngx';
 })
 export class SalesHomeComponent implements OnInit {
 
+   @ViewChild('salesTable', { static: false }) table: OTableComponent;
+   protected dialogService: DialogService;
+   
+   constructor(private router: Router) { }
 
-   constructor() { }
+   ngOnInit() { }
 
-   ngOnInit() {
+   salesByClientClic(){
+      let selected = this.table.getSelectedItems();
+      if(selected.length === 1){
+         let clientId = selected[0]['CLIENT_ID'];
+         this.router.navigate(['main/sales/client/'+clientId]);
+      }
+      else{
+         if (this.dialogService) {
+            this.dialogService.alert('OJO!','Primero debes de seleccionar un cliente.');
+         }
+      }
    }
 
    createFilter(values: Array<{ attr, value }>): Expression {
