@@ -22,7 +22,6 @@
     overflow: auto;
 
     .login-bg-container {
-      background-image: url('^assets/images/L.J.S.jpg');
       width: calc(100% - 640px);
       background-repeat: no-repeat;
       background-size: cover;
@@ -74,25 +73,33 @@
         .login-title-container {
           margin-top: 64px;
         }
-
         button {
+          width: 100%;
+          margin: 32px 0 0;
+          height: 42px;
+          font-size: 16px;
+          color: whitesmoke;
+          background-color: #919296;
+          border-radius: 12px;
+          box-shadow: 5px 5px 5px rgb(0, 0, 0);
+        }
+        button:hover{
+          background-color: whitesmoke;
+          color: black;
+          font-size: 12pt;
+      }
+        /* button {
           width: 100%;
           margin: 32px 0 0;
           height: 42px;
           font-size: 16px;
           color: rgb(179, 179, 181.027);
         }
-        .LOGIN{
-
-        }
-        div:hover{
-
-          background:rgb(255, 255, 255)
-        }
+        } */
 
         .dark_text {
-          color: #000000DE;
-          font-size: 9pt;
+          color: #919296;
+          font-size: 8pt;
         }
 
         .login_info,
@@ -133,6 +140,16 @@
     }
 
   }
+  .footer-container:hover{
+    background-color: whitesmoke;
+    font-size: 12pt;
+    div{
+      span{
+        color:black
+      }
+
+    }
+}
 
 }
 @media(max-width:576px) {
