@@ -2,14 +2,14 @@
   <o-text-input attr="id" sql-type="INTEGER" hidden="true" enabled="no"></o-text-input>
   <o-row>
     <o-column title-label="workers_photo" fxFlex="40">
-      <o-image id="workers_photo" attr="photo" empty-image="assets/images/no-image.png" sql-type="OTHER"></o-image>
+      <o-image id="workers_photo" label="{{ 'PHOTOTXT' | oTranslate }}" attr="photo" empty-image="assets/images/no-image.png"></o-image>
     </o-column>
     <o-column title-label="workers_personal_information" fxFlex="60">
-      <o-text-input class="input-padding" attr="name" fxFlex="100" required="yes"></o-text-input>
-      <o-text-input class="input-padding" attr="surname1" fxFlex="100" required="yes"></o-text-input>
-        <o-text-input class="input-padding" attr="surname2" fxFlex="100" required="yes"></o-text-input>
-        <o-date-input attr="startdate" fxFlex="100"></o-date-input>
-        <o-text-input class="input-padding" attr="telephone" fxFlex="100" required="yes"></o-text-input>
-        <o-text-input class="input-padding" attr="email" fxFlex="100" required="yes"></o-text-input>
+      <o-text-input class="input-padding" attr="name" label="{{ 'NAMETXT' | oTranslate }}" fxFlex="100" required="yes"></o-text-input>
+      <o-text-input class="input-padding" attr="surname1" label="{{ 'SURNAME1TXT' | oTranslate }}" fxFlex="100" required="yes"></o-text-input>
+        <o-text-input class="input-padding" attr="surname2" label="{{ 'SURNAME2TXT' | oTranslate }}" fxFlex="100" required="yes"></o-text-input>
+        <o-date-input attr="startdate" label="{{ 'STARTDATETXT' | oTranslate }}" fxFlex="100"></o-date-input>
+        <o-text-input class="input-padding" attr="telephone" label="{{ 'TELEPHONETXT' | oTranslate }}" fxFlex="100" required="yes"></o-text-input>
+        <o-text-input class="input-padding" attr="email" label="{{ 'EMAILTXT' | oTranslate }}" fxFlex="100" required="yes"></o-text-input>
       </o-column>
       <o-row>

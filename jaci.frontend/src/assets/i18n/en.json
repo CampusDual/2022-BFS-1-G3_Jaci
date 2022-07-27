@@ -20,5 +20,12 @@
   "FOOTER_CREATED_BY": "Created by Imatia Innovation",
   "FOOTER_RIGHTS": "All rights reserved",
   "IDCLIENTS": "Id Client",
-  "FOOTER_RIGHTS": "All rights reserved"
+  "FOOTER_RIGHTS": "All rights reserved",
+  "PHOTOTXT": "Photo",
+  "NAMETXT": "Name",
+  "SURNAME1TXT": "Surname1",
+  "SURNAME2TXT": "Surname2",
+  "STARTDATETXT": "Start date",
+  "TELEPHONETXT": "Telephone",
+  "EMAILTXT": "Email"
 }
