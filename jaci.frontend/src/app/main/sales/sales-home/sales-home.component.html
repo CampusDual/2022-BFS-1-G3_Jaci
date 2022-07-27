@@ -1,11 +1,11 @@
 <o-form show-header="no">
-  <o-column-collapsible title="{{ 'FILTERS_ACCOUNTS' | oTranslate }}" appearance="outline">
+  <o-column-collapsible title="{{ 'DATE FILTERS' | oTranslate }}" appearance="outline">
      <o-row layout-gap="18px">
         <o-column fxFlex="50" title="{{ 'STARTDATE' | oTranslate }}">
-           <o-date-input attr="startDate" label="INIT" read-only="no" required="no"></o-date-input>
+           <o-date-input attr="startDate" label="select init date" read-only="no" required="no"></o-date-input>
         </o-column>
         <o-column fxFlex="50" title="{{ 'ENDDATE' | oTranslate }}">
-           <o-date-input attr="endDate" label="END" read-only="no" required="no"></o-date-input>
+           <o-date-input attr="endDate" label="select end date" read-only="no" required="no"></o-date-input>
         </o-column>
      </o-row>
      <o-row layout-align="end" layout-gap="18px">
@@ -16,23 +16,23 @@
         </o-button>
      </o-row>
   </o-column-collapsible>
-
   <o-filter-builder #filterBuilder attr="thefilter"
      filters="STARTDATE_I:startDate;STARTDATE_E:endDate" [target]="salesTable"
      query-on-change="no" query-on-change-delay="500" [expression-builder]="createFilter"></o-filter-builder>
-
-
 <div fxFill fxLayout="column" fxLayoutAlign="start">
-  <o-table #salesTable fxFlex attr="salesTable" service="sales" entity="sales" keys="SALES_ID"
-    columns="SALES_ID;QUANTITY;PRICE;TOTAL;CLIENT_ID;CLIENT_ID;DATE;IS_CONFIRM"
-    visible-columns="SALES_ID;QUANTITY;PRICE;TOTAL;PRODUCT_ID;CLIENT_ID;DATE;IS_CONFIRM" query-rows="10">
-    <o-table-column attr="SALES_ID" title="ID" width="50px"></o-table-column>
-    <o-table-column attr="QUANTITY" title="QUANTITY" width="150px"></o-table-column>
-    <o-table-column attr="PRICE" title="PRICE" width="100px"></o-table-column>
-    <o-table-column attr="TOTAL" title="TOTAL" width="100px"></o-table-column>
-    <o-table-column attr="PRODUCT_ID" title="PRODUCT_ID" width="150px"></o-table-column>
-    <o-table-column attr="CLIENT_ID" title="CLIENT_ID" width="150px"></o-table-column>
-    <o-table-column attr="DATE" title="DATE" type="date" format="LL"></o-table-column>
-    <o-table-column attr="IS_CONFIRM" title="IS_CONFIRM" width="150px"></o-table-column>
+  <o-table #salesTable fxFlex attr="salesTable" service="sales" entity="sales" keys="sales_id"
+    columns="sales_id;quantity;price;total;product_id;client_id;client_id;date;is_confirm"
+    visible-columns="quantity;price;total;product_id;client_id;date" query-rows="10" delete-button="no">
+    <o-table-button icon = "timeline" (onClick)="openSalesCharts()" attr="sales_charts" label="VIEW CHARTS"></o-table-button>
+    <o-table-context-menu delete="no"></o-table-context-menu>
+    <o-table-column attr="sales_id" title="ID" width="50px"></o-table-column>
+    <o-table-column attr="quantity" title="QUANTITY" width="150px"></o-table-column>
+    <o-table-column attr="price" title="PRICE" width="100px"></o-table-column>
+    <o-table-column attr="total" title="TOTAL" width="100px"></o-table-column>
+    <o-table-column attr="product_id" title="PRODUCT_ID" width="150px"></o-table-column>
+    <o-table-column attr="client_id" title="CLIENT_ID" width="150px"></o-table-column>
+    <o-table-column attr="date" title="DATE" type="date" format="LL"></o-table-column>
+    <o-table-column attr="is_confirm" title="IS_CONFIRM" width="150px"></o-table-column>
   </o-table>
   </div>
+</o-form>

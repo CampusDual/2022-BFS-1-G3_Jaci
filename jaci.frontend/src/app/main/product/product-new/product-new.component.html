@@ -1,15 +1,17 @@
-<o-form service="products" entity="product" keys="ID" header-actions="R;U" show-header-navigation="no">
-    <o-text-input attr="ID" sql-type="INTEGER" enabled="no"></o-text-input>
+<o-form service="products" entity="product" keys="id" header-actions="R;U;" show-header-navigation="no">
     <o-row>
       <o-column title-label="PRODUCT-NEW" fxFlex>
         <o-row>
-          <o-textarea-input class="input-padding" attr="DESCRIPTION" fxFlex="40" required="yes" enabled="yes"></o-textarea-input>
+          <o-text-input class="input-padding" fxFlex="40" required="yes" attr="name" enabled="yes"></o-text-input>
         </o-row>
         <o-row>
-          <o-integer-input min="0" attr="STOCK" class="input-padding" fxFlex="40" required="yes" enabled="yes"></o-integer-input>
+          <o-textarea-input class="input-padding" attr="description" fxFlex="40" required="yes" enabled="yes"></o-textarea-input>
         </o-row>
         <o-row>
-          <o-currency-input min="0" attr="PRICE" label="Price" fxFlex="40" enabled="yes" required="yes"></o-currency-input>
+          <o-integer-input min="0" attr="stock" class="input-padding" fxFlex="40" required="yes" enabled="yes"></o-integer-input>
+        </o-row>
+        <o-row>
+          <o-currency-input min="0" attr="price" label="Price" fxFlex="40" enabled="yes" required="yes"></o-currency-input>
         </o-row>
       </o-column>
     </o-row>

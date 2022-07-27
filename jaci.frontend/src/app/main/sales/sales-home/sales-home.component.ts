@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
-import { FilterExpressionUtils, Expression } from 'ontimize-web-ngx';
+import { FilterExpressionUtils, Expression, OTableComponent, DialogService } from 'ontimize-web-ngx';
 
 @Component({
    selector: 'app-sales-home',
@@ -9,10 +10,15 @@ import { FilterExpressionUtils, Expression } from 'ontimize-web-ngx';
 })
 export class SalesHomeComponent implements OnInit {
 
+   @ViewChild('salesTable', { static: false }) table: OTableComponent;
+   protected dialogService: DialogService;
+   
+   constructor(private router: Router) { }
 
-   constructor() { }
+   ngOnInit() { }
 
-   ngOnInit() {
+   openSalesCharts(){
+      this.router.navigate(['main/sales/charts']);
    }
 
    createFilter(values: Array<{ attr, value }>): Expression {

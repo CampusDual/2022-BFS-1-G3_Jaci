@@ -19,12 +19,12 @@ export class ProductHomeComponent implements OnInit {
 
   applyFilter(){
     this.entity = "lessProduct";
-    this.table.refresh();
+    this.table.reloadData();
   }
 
   clearFilter(){
     this.entity = "product";
-    this.table.refresh();
+    this.table.reloadData();
   }
 
 }
