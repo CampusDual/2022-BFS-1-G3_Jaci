@@ -13,12 +13,12 @@ const routes: Routes = [{
   path : 'new',
   component: SalesNewComponent
 },
+{ path:'charts',
+  component: SalesChartsComponent
+},
 {
   path : ':sales_id',
   component: SalesDetailComponent
-},
-{ path:'charts',
-  component: SalesChartsComponent
 }];
 
 @NgModule({

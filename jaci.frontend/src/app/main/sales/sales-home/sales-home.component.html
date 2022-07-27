@@ -28,7 +28,7 @@
   <o-table #salesTable fxFlex attr="salesTable" service="sales" entity="sales" keys="sales_id"
     columns="sales_id;quantity;price;total;product_id;client_id;date;is_confirm"
     visible-columns="sales_id;quantity;price;total;product_id;client_id;date" query-rows="10" delete-button="no">
-    <o-table-button icon = "shopping_bag" (onClick)="salesByClientClic()" attr="CLIENT_SALES" label="OPEN CLIENT SALES"></o-table-button>
+    <o-table-button icon = "bar_chart" (onClick)="openSalesCharts()" attr="SALES_CHARTS" label="OPEN SALES CHARTS"></o-table-button>
     <o-table-context-menu delete="no"></o-table-context-menu>
     <o-table-column attr="sales_id" title="ID" width="50px"></o-table-column>
     <o-table-column attr="quantity" title="QUANTITY" width="150px"></o-table-column>
