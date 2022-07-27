@@ -1,5 +1,6 @@
 package jaci.jaci.tienda.model.core.service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -43,6 +44,13 @@ public class SalesService implements ISalesService {
 	 public EntityResult salesDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
 	  return this.daoHelper.delete(this.salesDao, keyMap);
 	 }
-	
+
+	 public EntityResult saleChartQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException {
+	 	return this.daoHelper.query(this.salesDao, keyMap, attrList, SalesDao.QUERY_CHART);
+	 }
+
+	public EntityResult incomeChartQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException {
+		return this.daoHelper.query(this.salesDao, keyMap, attrList, SalesDao.QUERY_AMOUNT_CHART);
+	}
 
 }

@@ -12,4 +12,38 @@
         <Column>SALES_ID</Column>
     </UpdateKeys>
     <GeneratedKey>SALES_ID</GeneratedKey>
+    <Queries>
+        <Query id="CHART_DATA">
+            <ValidColumns>
+                <Column>date</Column>
+                <Column>sales_id</Column>
+            </ValidColumns>
+            <Sentence>
+                <![CDATA[
+               SELECT
+                  date, count(*) as sales_id
+               FROM
+                  sales
+               WHERE
+                  current_date - 30 <= date
+               GROUP BY date
+            ]]>
+            </Sentence>
+        </Query>
+        <Query id="CHART_AMOUNT">
+            <ValidColumns>
+                <Column>date</Column>
+                <Column>price</Column>
+            </ValidColumns>
+            <Sentence>
+                <![CDATA[
+               SELECT
+                  date, sum(price) as price
+               FROM
+                  sales
+               GROUP BY date
+            ]]>
+            </Sentence>
+        </Query>
+    </Queries>
 </JdbcEntitySetup>
