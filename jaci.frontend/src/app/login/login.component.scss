@@ -22,7 +22,7 @@
     overflow: auto;
 
     .login-bg-container {
-      background-image: url('^assets/images/JACI SHOP 1.1.png');
+      background-image: url('^assets/images/L.J.S.jpg');
       width: calc(100% - 640px);
       background-repeat: no-repeat;
       background-size: cover;
@@ -81,6 +81,10 @@
           height: 42px;
           font-size: 16px;
           color: #b3b3b5;
+        }
+        div:hover{
+
+          background:rgb(255, 255, 255)
         }
 
         .dark_text {

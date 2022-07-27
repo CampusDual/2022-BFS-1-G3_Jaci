@@ -17,17 +17,8 @@ export class SalesHomeComponent implements OnInit {
 
    ngOnInit() { }
 
-   salesByClientClic(){
-      let selected = this.table.getSelectedItems();
-      if(selected.length === 1){
-         let clientId = selected[0]['CLIENT_ID'];
-         this.router.navigate(['main/sales/client/'+clientId]);
-      }
-      else{
-         if (this.dialogService) {
-            this.dialogService.alert('OJO!','Primero debes de seleccionar un cliente.');
-         }
-      }
+   openSalesCharts(){
+      this.router.navigate(['main/sales/charts']);
    }
 
    createFilter(values: Array<{ attr, value }>): Expression {
