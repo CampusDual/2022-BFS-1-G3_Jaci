@@ -20,5 +20,6 @@ public class SalesDao extends OntimizeJdbcDaoSupport{
 	 public static final String ATTR_COSTUMER_ID = "COSTUMER_ID";
 	 public static final String ATTR_DATE = "DATE";
 	 public static final String ATTR_IS_CONFIRM = "IS_CONFIRM";
-	 
+	 public static final String QUERY_CHART = "CHART_DATA";
+	 public static final String QUERY_AMOUNT_CHART = "CHART_AMOUNT";
 }
