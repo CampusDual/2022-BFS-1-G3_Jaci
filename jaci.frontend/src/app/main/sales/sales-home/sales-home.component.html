@@ -16,14 +16,19 @@
         </o-button>
      </o-row>
   </o-column-collapsible>
-  <o-filter-builder #filterBuilder attr="thefilter"
+
+
+<o-filter-builder #filterBuilder attr="thefilter"
      filters="STARTDATE_I:startDate;STARTDATE_E:endDate" [target]="salesTable"
-     query-on-change="no" query-on-change-delay="500" [expression-builder]="createFilter"></o-filter-builder>
+     query-on-change="no" query-on-change-delay="500" [expression-builder]="createFilter">
+</o-filter-builder>
+
+<o-form-layout-manager title="{{'SALES' | oTranslate }}" separator=" " mode="tab" label-columns="SALES_ID;QUANTITY;PRICE;TOTAL;CLIENT_ID;CLIENT_ID;DATE;IS_CONFIRM">
 <div fxFill fxLayout="column" fxLayoutAlign="start">
   <o-table #salesTable fxFlex attr="salesTable" service="sales" entity="sales" keys="sales_id"
-    columns="sales_id;quantity;price;total;product_id;client_id;client_id;date;is_confirm"
-    visible-columns="quantity;price;total;product_id;client_id;date" query-rows="10" delete-button="no">
-    <o-table-button icon = "timeline" (onClick)="openSalesCharts()" attr="sales_charts" label="VIEW CHARTS"></o-table-button>
+    columns="sales_id;quantity;price;total;product_id;client_id;date;is_confirm"
+    visible-columns="sales_id;quantity;price;total;product_id;client_id;date" query-rows="10" delete-button="no">
+    <o-table-button icon = "shopping_bag" (onClick)="salesByClientClic()" attr="CLIENT_SALES" label="OPEN CLIENT SALES"></o-table-button>
     <o-table-context-menu delete="no"></o-table-context-menu>
     <o-table-column attr="sales_id" title="ID" width="50px"></o-table-column>
     <o-table-column attr="quantity" title="QUANTITY" width="150px"></o-table-column>
@@ -34,5 +39,8 @@
     <o-table-column attr="date" title="DATE" type="date" format="LL"></o-table-column>
     <o-table-column attr="is_confirm" title="IS_CONFIRM" width="150px"></o-table-column>
   </o-table>
-  </div>
+</div>
+</o-form-layout-manager>
+
 </o-form>
+
