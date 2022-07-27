@@ -4,10 +4,15 @@ import { OntimizeWebModule } from 'ontimize-web-ngx';
 import { SalesRoutingModule } from './sales-routing.module';
 import { SalesHomeComponent } from './sales-home/sales-home.component';
 import { SalesClientComponent } from './sales-client/sales-client.component';
+import { SalesNewComponent } from './sales-new/sales-new.component';
+import { SalesDetailComponent } from './sales-detail/sales-detail.component';
 
 
 @NgModule({
-  declarations: [SalesHomeComponent, SalesClientComponent],
+  declarations: [
+    SalesHomeComponent,
+    SalesNewComponent,
+    SalesDetailComponent],
   imports: [
     CommonModule,
     OntimizeWebModule,

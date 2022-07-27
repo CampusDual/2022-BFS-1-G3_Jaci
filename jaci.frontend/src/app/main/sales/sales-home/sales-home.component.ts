@@ -12,7 +12,7 @@ export class SalesHomeComponent implements OnInit {
 
    @ViewChild('salesTable', { static: false }) table: OTableComponent;
    protected dialogService: DialogService;
-   
+
    constructor(private router: Router) { }
 
    ngOnInit() { }
