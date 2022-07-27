@@ -17,7 +17,7 @@ const routes: Routes = [{
   path : ':sales_id',
   component: SalesDetailComponent
 },
-  path:'charts',
+{ path:'charts',
   component: SalesChartsComponent
 }];
 
