@@ -3,7 +3,7 @@
       <o-table #accountClientsTable attr="clientsTable" service="clients" entity="clients" keys="id"
       columns="id;name;surname1;surname2;email;bank_account;credit_number"
       visible-columns="id;name;surname1;surname2;email;bank_account;credit_number" query-rows="20" detail-mode="dblclick" >
-      <o-table-column attr="id" title="{{ 'IDCLIENTS' | oTranslate }}" width="100px"></o-table-column>
+      <o-table-column attr="id" title="{{ 'IDCLIENTS' | oTranslate }}" width="100px" sql-type="INTEGER"></o-table-column>
       <o-table-column attr="name" title="name" width="100px"></o-table-column>
       <o-table-column attr="surname1" title="surname1" width="100px"></o-table-column>
       <o-table-column attr="email" title="email" width="100px"></o-table-column>
