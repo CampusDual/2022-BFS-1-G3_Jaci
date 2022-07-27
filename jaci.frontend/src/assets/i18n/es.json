@@ -19,5 +19,12 @@
   "FORGOT_PWD": "¿Has olvidado tu contraseña?",
   "FOOTER_CREATED_BY": "Creado por Imatia Innovation",
   "FOOTER_RIGHTS": "Todos los derechos reservados",
-  "IDCLIENTS": "Id Cliente"
+  "IDCLIENTS": "Id Cliente",
+  "PHOTOTXT": "Foto",
+  "NAMETXT": "Nombre",
+  "SURNAME1TXT": "Primer apellido",
+  "SURNAME2TXT": "Segundo apellido",
+  "STARTDATETXT": "Fecha de Inicio",
+  "TELEPHONETXT": "Teléfono",
+  "EMAILTXT": "Email"
 }
