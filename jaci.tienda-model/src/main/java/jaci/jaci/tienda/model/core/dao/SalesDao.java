@@ -24,4 +24,5 @@ public class SalesDao extends OntimizeJdbcDaoSupport{
 	 public static final String ATTR_IS_CONFIRM = "IS_CONFIRM";
 	 public static final String QUERY_CHART = "CHART_DATA";
 	 public static final String QUERY_AMOUNT_CHART = "CHART_AMOUNT";
+	 public static final String QUERY_PRODUCT = "CHART_PRODUCT";
 }

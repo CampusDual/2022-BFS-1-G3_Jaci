@@ -53,6 +53,9 @@ public class SalesService implements ISalesService {
 		return this.daoHelper.query(this.salesDao, keyMap, attrList, SalesDao.QUERY_AMOUNT_CHART);
 	}
 
+	public EntityResult productChartQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException {
+		return this.daoHelper.query(this.salesDao, keyMap, attrList, SalesDao.QUERY_PRODUCT);
+	}
 	// --------- CLIENTS QUERRY IN SALES -----------
 	@Override
 	public EntityResult vSalesClientsQuery(Map<String, Object> keysValues, List<String> attributes)
@@ -74,6 +77,7 @@ public class SalesService implements ISalesService {
 	@Override
 	public EntityResult vSalesProductDelete(Map<String, Object> keyValues) throws OntimizeJEERuntimeException {
 		 return this.daoHelper.delete(this.salesDao, keyValues);
+
 	}
 
 }
