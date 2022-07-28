@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { OButtonToggleComponent, OFormComponent, OIntegerInputComponent } from 'ontimize-web-ngx';
 
 @Component({
@@ -14,9 +15,7 @@ export class ProductDetailComponent implements OnInit {
   @ViewChild('toggle', { static: false }) toggle: OButtonToggleComponent;
   @ViewChild('form', { static: false }) form: OFormComponent;
 
-  constructor() {
-    
-  }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     
@@ -29,6 +28,10 @@ export class ProductDetailComponent implements OnInit {
     else{
       this.toggle.checked = false;
     }
+  }
+
+  openProductChart(){
+    this.router.navigateByUrl('main/products/charts');
   }
 
   setSale(){

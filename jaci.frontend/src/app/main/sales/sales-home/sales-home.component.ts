@@ -15,10 +15,12 @@ export class SalesHomeComponent implements OnInit {
 
    constructor(private router: Router) { }
 
-   ngOnInit() { }
+   ngOnInit() {  }
 
    openSalesCharts(){
-      this.router.navigate(['main/sales/charts']);
+      
+      this.router.navigateByUrl('main/sales/charts', { skipLocationChange: false });
+      //this.router.navigate(['main/sales/charts']);
    }
 
    createFilter(values: Array<{ attr, value }>): Expression {
