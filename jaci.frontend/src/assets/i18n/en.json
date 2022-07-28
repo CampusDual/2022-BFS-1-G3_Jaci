@@ -36,5 +36,7 @@
   "SURNAME2TXT": "Surname2",
   "STARTDATETXT": "Start date",
   "TELEPHONETXT": "Telephone",
-  "EMAILTXT": "Email"
+  "EMAILTXT": "Email",
+  "BANKACCOUNT": "Bank account",
+  "CREDITNUMBER": "Credit number"
 }

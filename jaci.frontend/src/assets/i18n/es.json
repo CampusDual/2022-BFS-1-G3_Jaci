@@ -35,5 +35,7 @@
   "SURNAME2TXT": "Segundo apellido",
   "STARTDATETXT": "Fecha de Inicio",
   "TELEPHONETXT": "Teléfono",
-  "EMAILTXT": "Email"
+  "EMAILTXT": "Email",
+  "BANKACCOUNT": "Cuenta bancaria",
+  "CREDITNUMBER": "Tarjeta de crédito"
 }
