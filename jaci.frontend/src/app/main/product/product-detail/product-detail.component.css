@@ -1,0 +1,15 @@
+#btn-toggle{
+  width: 20%;
+  height: 10%;
+  margin-left: 20%;
+box-shadow: 5px 5px 5px black;
+}
+#btn-toggle:hover{
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+
+}
+#product_photo{
+  width: 80%;
+  height: 80%;
+}

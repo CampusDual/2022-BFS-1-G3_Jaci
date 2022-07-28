@@ -17,7 +17,7 @@ export class ProductChartComponent implements OnInit {
 
   @ViewChild("chart", {static: false}) chart: OChartComponent;
 
-  constructor(private _Activatedroute:ActivatedRoute, private ontimizeService: OntimizeService) { 
+  constructor(private _Activatedroute:ActivatedRoute, private ontimizeService: OntimizeService) {
   }
 
   ngOnInit() {
@@ -28,7 +28,7 @@ export class ProductChartComponent implements OnInit {
   }
 
   //ngAfterViewInit(){
-    
+
   //}
 
   createChart(){
@@ -40,7 +40,7 @@ export class ProductChartComponent implements OnInit {
 
     this.chartAdapter = new LineDataAdapter(chartParametersAdapter);
 
-    
+
 
     let service: OntimizeService = this.ontimizeService;
     let conf = service.getDefaultServiceConfiguration('sales');
