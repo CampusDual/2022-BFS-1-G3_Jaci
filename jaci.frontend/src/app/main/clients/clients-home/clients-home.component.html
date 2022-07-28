@@ -2,12 +2,14 @@
     <div fxFill>
       <o-table #accountClientsTable attr="clientsTable" service="clients" entity="clients" keys="id"
       columns="id;name;surname1;surname2;email;bank_account;credit_number"
-      visible-columns="id;name;surname1;surname2;email;bank_account;credit_number" query-rows="20" detail-mode="dblclick" >
-      <o-table-column attr="id" title="{{ 'IDCLIENTS' | oTranslate }}" width="100px" sql-type="INTEGER"></o-table-column>
-      <o-table-column attr="name" title="name" width="100px"></o-table-column>
-      <o-table-column attr="surname1" title="surname1" width="100px"></o-table-column>
-      <o-table-column attr="email" title="email" width="100px"></o-table-column>
-      <o-table-column attr="bank_account" title="bank_account" width="100px"></o-table-column>
+      visible-columns="name;surname1;surname2;email;bank_account;credit_number" query-rows="20" detail-mode="dblclick" >
+      <o-table-column attr="id" title="{{ 'IDCLIENTS' | oTranslate }}" width="10%" sql-type="INTEGER"></o-table-column>
+      <o-table-column attr="name" title="{{ 'NAMETXT' | oTranslate }}" width="10%"></o-table-column>
+      <o-table-column attr="surname1" title="{{ 'SURNAME1TXT' | oTranslate }}"  width="10%"></o-table-column>
+      <o-table-column attr="surname2" title="{{ 'SURNAME2TXT' | oTranslate }}"  width="10%"></o-table-column>
+      <o-table-column attr="email" title="{{ 'EMAILTXT' | oTranslate }}" width="20%"></o-table-column>
+      <o-table-column attr="bank_account" title="{{ 'BANKACCOUNT' | oTranslate }}" width="20%"></o-table-column>
+      <o-table-column attr="credit_number" title="{{ 'CREDITNUMBER' | oTranslate }}" width="20%"></o-table-column>
     </o-table>
   </div>
 </o-form-layout-manager>
