@@ -1,22 +1,48 @@
 <o-form service="sales" entity="sales" keys="sales_id" header-actions="R;I;U;D" show-header-navigation="no">
-  <o-row>
-    <o-column title-label="SALES DETAIL" fxFlex>
+  <mat-tab-group fxFlex>
+    <mat-tab label="{{ 'SALES_INFORMATION' | oTranslate }}">
       <o-row>
-        <o-integer-input attr="sales_id" class="input-padding" step="0" grouping="no" fxFlex="40" sql-type="INTEGER"></o-integer-input>
-        <o-integer-input attr="quantity" class="input-padding" step="0" grouping="no" fxFlex="40"></o-integer-input>
-        <o-real-input attr="price" class="input-padding" step="0" grouping="no" fxFlex="40"></o-real-input>
-        <o-real-input attr="total" class="input-padding" step="0" grouping="no" fxFlex="40"></o-real-input>
+        <o-column title-label="SALES DETAIL" fxFlex>
+          <o-row>
+            <o-integer-input attr="sales_id" class="input-padding" step="0" grouping="no" fxFlex="40" sql-type="INTEGER"></o-integer-input>
+            <o-integer-input attr="quantity" class="input-padding" step="0" grouping="no" fxFlex="40"></o-integer-input>
+            <o-real-input attr="price" class="input-padding" step="0" grouping="no" fxFlex="40"></o-real-input>
+            <o-real-input attr="total" class="input-padding" step="0" grouping="no" fxFlex="40"></o-real-input>
+          </o-row>
+          <o-row>
+            <o-integer-input attr="product_id" fxFlex></o-integer-input>
+          </o-row>
+          <o-row>
+            <o-integer-input attr="client_id" fxFlex></o-integer-input>
+          </o-row>
+          <o-row>
+            <o-date-input attr="date" fxFlex="20"></o-date-input>
+          </o-row>
+        </o-column>
       </o-row>
-      <o-row>
-        <o-integer-input attr="product_id" fxFlex></o-integer-input>
-      </o-row>
-      <o-row>
-        <o-integer-input attr="client_id" fxFlex></o-integer-input>
-      </o-row>
-      <o-row>
-        <o-date-input attr="date" fxFlex="20"></o-date-input>
-      </o-row>
-    </o-column>
-  </o-row>
+    </mat-tab>
+    <mat-tab label="{{'CLIENTS_FROM_SALES' | oTranslate }}">
+      <o-table #accountClientsTable attr="salesTable" sort-columns="id:DESC" service="sales" entity="vSalesClients" keys="client_id" parent-keys="sales_id"
+      columns="id;name;surname1;surname2;email;bank_account;credit_number" insert-button="no" refresh-button="no"
+      visible-columns="id;name;surname1;surname2;email;bank_account;credit_number" query-rows="20"  >
+      <o-table-column attr="id" title="{{ 'IDCLIENTS' | oTranslate }}" width="100px" sql-type="INTEGER"></o-table-column>
+      <o-table-column attr="name" title="name" width="100px"></o-table-column>
+      <o-table-column attr="surname1" title="surname1" width="100px"></o-table-column>
+      <o-table-column attr="email" title="email" width="100px"></o-table-column>
+      <o-table-column attr="bank_account" title="bank_account" width="100px"></o-table-column>
+    </o-table>
+    </mat-tab>
+    <mat-tab label="{{ 'PRODUCT_FROM_SALES' | oTranslate }}">
+      <o-table #table attr="productTable" sort-columns="id:DESC" service="sales" entity="vSalesProduct" keys="product_id" parent-keys="sales_id" columns="name;id;description;stock;price;on_sale" visible-columns="name;description;stock;price;on_sale"
+      query-rows="20" delete-button="yes" insert-button="no" refresh-button="no">
+       <o-table-context-menu delete="no"></o-table-context-menu>
+       <o-table-column attr="name" title="NAME" width="100px"></o-table-column>
+       <o-table-column attr="description" title="DESCRIPTION" width="800px"></o-table-column>
+       <o-table-column attr="stock" title="STOCK" width="200px"></o-table-column>
+       <o-table-column attr="price" title="PRICE" width="20px" type="currency" currency-symbol="€" currency-symbol-position="right"></o-table-column>
+       <o-table-column attr="on_sale" title="ON SALE" width="60px" type="boolean" render-true-value="YES" render-false-value="NO"></o-table-column>
+     </o-table>
+    </mat-tab>
+  </mat-tab-group>
 </o-form>
 

@@ -28,10 +28,10 @@ export class SalesHomeComponent implements OnInit {
       values.forEach(fil => {
          if (fil.value) {
             if (fil.attr === 'STARTDATE_I') {
-               filters.push(FilterExpressionUtils.buildExpressionMoreEqual('DATE', fil.value));
+               filters.push(FilterExpressionUtils.buildExpressionMoreEqual('date', fil.value));
             }
             if (fil.attr === 'STARTDATE_E') {
-               filters.push(FilterExpressionUtils.buildExpressionLessEqual('DATE', fil.value));
+               filters.push(FilterExpressionUtils.buildExpressionLessEqual('date', fil.value));
             }
          }
       });
