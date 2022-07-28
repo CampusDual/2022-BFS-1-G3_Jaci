@@ -19,5 +19,8 @@
   "FORGOT_PWD": "¿Has olvidado tu contraseña?",
   "FOOTER_CREATED_BY": "Creado por Imatia Innovation",
   "FOOTER_RIGHTS": "Todos los derechos reservados",
-  "IDCLIENTS": "Id Cliente"
+  "IDCLIENTS": "Id Cliente",
+  "SALES_INFORMATION": "Infromación de la venta",
+  "CLIENTS_FROM_SALES": "Cliente de la venta",
+  "PRODUCT_FROM_SALES": "Producto de la venta"
 }
