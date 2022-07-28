@@ -25,41 +25,44 @@ export class SalesChartsComponent implements OnInit {
 
 
   ngAfterViewInit() {
-    //var chartParamatersSalesAdapter = new DiscreteBarChartConfiguration();
-    // chartParamatersSalesAdapter.xAxis = "date";
-    // chartParamatersSalesAdapter.yAxis = ["sales_id"];
-    // this.chartAdapterSales = new DiscreteBarDataAdapter(chartParamatersSalesAdapter);
-    
+    var chartParamatersSalesAdapter = new DiscreteBarChartConfiguration();
+     chartParamatersSalesAdapter.xAxis = "date";
+     chartParamatersSalesAdapter.yAxis = ["sales_id"];
+     this.chartAdapterSales = new DiscreteBarDataAdapter(chartParamatersSalesAdapter);
 
-    
+
+
   }
 
-  // getExpPayments() {
-  //   this.service = this.injector.get(OntimizeService);
-  //   const conf = this.service.getDefaultServiceConfiguration("sales");
-  //   this.service.configureService(conf);
+  getExpPayments() {
+     this.service = this.injector.get(OntimizeService);
+    const conf = this.service.getDefaultServiceConfiguration("sales");
+    this.service.configureService(conf);
 
-  //   this.service
-  //     .query(
-  //       void 0,
-  //       ["total"],
-  //       "clientExperienceTotalAmountsOfTheMonthsOfAYear"
-  //     )
-  //     .subscribe((resp) => {
-  //       if (resp.code === 0) {
+    this.service
+      .query(
+         void 0,
+        ["total"],
+        "clientExperienceTotalAmountsOfTheMonthsOfAYear"
+       )
+      .subscribe((resp) => {
+         if (resp.code === 0) {
 
-  //         var finalMonth: number = new Date().getMonth() + 1;
-  //         var dataExp = this.validDataOfArrayOfMonthsOfYear(resp.data, 1, finalMonth);
-  //         this.adaptTotalAmount(dataExp);
+          /*var finalMonth: number = new Date().getMonth() + 1;
+          var dataExp = this.validDataOfArrayOfMonthsOfYear(resp.data, 1, finalMonth);
+           this.adaptTotalAmount(dataExp); */
 
 
-  //         this.discreteBarChartdiscreteBarChartTotalAmountsOfTheMonthsOfAYear.setDataArray(
-  //           this.chartAdapterTotalMonthAdapter.adaptResult(dataExp)
-  //         );
-  //       } else {
-  //         console.log("Error");
-  //       }
-  //     });
-  // }
+           /* this.discreteBarChartdiscreteBarChartTotalAmountsOfTheMonthsOfAYear.setDataArray(
+            this.chartAdapterTotalMonthAdapter.adaptResult(dataExp)
+            );*/
+            console.log(resp.data);
+
+
+         } else {
+          console.log("Error");
+        }
+      });
+   }
 
 }

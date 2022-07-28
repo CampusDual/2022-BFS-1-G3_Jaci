@@ -17,16 +17,17 @@
             <ValidColumns>
                 <Column>date</Column>
                 <Column>sales_id</Column>
+                <Column>product_id</Column>
             </ValidColumns>
             <Sentence>
                 <![CDATA[
                SELECT
-                  date, count(*) as sales_id
+                  date, count(*) as sales_id,product_id
                FROM
                   sales
                WHERE
                   current_date - 30 <= date
-               GROUP BY date
+               GROUP BY date,product_id
             ]]>
             </Sentence>
         </Query>
@@ -48,10 +49,10 @@
         <Query id="CHART_PRODUCT">
             <Sentence>
                 <![CDATA[
-               SELECT count(*) as sales_id, date
+               SELECT count(*) as sales_id, date,product_id
                FROM sales
                #WHERE#
-               GROUP BY date
+               GROUP BY date,product_id
             ]]>
             </Sentence>
         </Query>
