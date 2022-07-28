@@ -6,13 +6,15 @@ import { OntimizeWebModule } from 'ontimize-web-ngx';
 import { ProductHomeComponent } from './product-home/product-home.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductNewComponent } from './product-new/product-new.component';
+import { ProductChartComponent } from './product-chart/product-chart.component';
 
 
 @NgModule({
   declarations: [
     ProductHomeComponent,
     ProductNewComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    ProductChartComponent
     
   ],
   imports: [

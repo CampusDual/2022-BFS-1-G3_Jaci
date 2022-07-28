@@ -17,10 +17,17 @@
   "ERROR_USER_PASS_INCORRECT": "Usuario o contraseña incorrecta",
   "REMEMBER_ME": "Recuérdame",
   "FORGOT_PWD": "¿Has olvidado tu contraseña?",
-  "FOOTER_CREATED_BY": "Creado por Imatia Innovation",
+  "FOOTER_CREATED_BY": "Creado por Jaci teams",
   "FOOTER_RIGHTS": "Todos los derechos reservados",
   "IDCLIENTS": "Id Cliente",
   "SALES_INFORMATION": "Infromación de la venta",
   "CLIENTS_FROM_SALES": "Cliente de la venta",
   "PRODUCT_FROM_SALES": "Producto de la venta"
+  "PHOTOTXT": "Foto",
+  "NAMETXT": "Nombre",
+  "SURNAME1TXT": "Primer apellido",
+  "SURNAME2TXT": "Segundo apellido",
+  "STARTDATETXT": "Fecha de Inicio",
+  "TELEPHONETXT": "Teléfono",
+  "EMAILTXT": "Email"
 }

@@ -17,11 +17,18 @@
   "ERROR_USER_PASS_INCORRECT": "Invalid username or password",
   "REMEMBER_ME": "Remember me",
   "FORGOT_PWD": "Forgot your password?",
-  "FOOTER_CREATED_BY": "Created by Imatia Innovation",
+  "FOOTER_CREATED_BY": "Created by Jaci team",
   "FOOTER_RIGHTS": "All rights reserved",
   "IDCLIENTS": "Id Client",
   "FOOTER_RIGHTS": "All rights reserved",
   "SALES_INFORMATION": "Sales information",
   "CLIENTS_FROM_SALES": "Client from the sale",
   "PRODUCT_FROM_SALES": "Product from sale"
+  "PHOTOTXT": "Photo",
+  "NAMETXT": "Name",
+  "SURNAME1TXT": "Surname1",
+  "SURNAME2TXT": "Surname2",
+  "STARTDATETXT": "Start date",
+  "TELEPHONETXT": "Telephone",
+  "EMAILTXT": "Email"
 }
