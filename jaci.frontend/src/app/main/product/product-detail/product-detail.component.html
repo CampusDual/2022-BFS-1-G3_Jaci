@@ -1,15 +1,21 @@
 <o-form #form service="products" entity="product" keys="id" header-actions="R;U;" show-header-navigation="no">
-    <o-text-input attr="id" sql-type="INTEGER" enabled="no"></o-text-input>
+  <div o-form-toolbar-buttons>
+    <button (click)="openProductChart()" attr="PRODUCT_CHART" type="button" class="o-form-toolbar-button" mat-stroked-button>
+      <mat-icon>bar_chart</mat-icon>
+      <span>OPEN PRODUCT CHART</span>
+    </button>
+  </div>
+    <o-text-input attr="id" label="Id" sql-type="INTEGER" enabled="no"></o-text-input>
     <o-row>
       <o-column title-label="PRODUCT-DETAILS" fxFlex>
         <o-row>
-          <o-text-input attr="name" class="input-padding" fxFlex="40" enabled="yes"></o-text-input>
+          <o-text-input attr="name" label="Name" class="input-padding" fxFlex="40" enabled="yes"></o-text-input>
         </o-row>
         <o-row>
-          <o-textarea-input class="input-padding" attr="description" fxFlex="40" enabled="yes"></o-textarea-input>
+          <o-textarea-input class="input-padding" attr="description" label="Description" fxFlex="40" enabled="yes"></o-textarea-input>
         </o-row>
         <o-row>
-          <o-text-input attr="stock" class="input-padding" fxFlex="40" enabled="no"></o-text-input>
+          <o-text-input attr="stock" label="Stock" class="input-padding" fxFlex="40" enabled="no"></o-text-input>
         </o-row>
         <o-row>
           <o-currency-input attr="price" label="Price" fxFlex="40" enabled="yes"></o-currency-input>
@@ -18,7 +24,7 @@
     </o-row>
     <o-row>
       <o-column>
-        <o-button-toggle #toggle (onChange)="setSale()" attr="SET_SALE" label="ON SALE" layout-padding></o-button-toggle>
+        <o-button-toggle #toggle (onChange)="setSale()" attr="SET_SALE" label="ON SALE" layout-padding></o-button-toggle>     
       </o-column>
       <o-column>
         <o-text-input attr="on_sale" type="boolean" style="display:none"></o-text-input>
