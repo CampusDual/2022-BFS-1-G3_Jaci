@@ -1,19 +1,13 @@
 <o-form service="products" entity="product" keys="id" header-actions="R;U;" show-header-navigation="no">
-    <o-row>
-      <o-column title-label="PRODUCT-NEW" fxFlex>
         <o-row>
-          <o-text-input class="input-padding" fxFlex="40" required="yes" attr="name" enabled="yes"></o-text-input>
-        </o-row>
-        <o-row>
-          <o-textarea-input class="input-padding" attr="description" fxFlex="40" required="yes" enabled="yes"></o-textarea-input>
-        </o-row>
-        <o-row>
-          <o-integer-input min="0" attr="stock" class="input-padding" fxFlex="40" required="yes" enabled="yes"></o-integer-input>
-        </o-row>
-        <o-row>
-          <o-currency-input min="0" attr="price" label="Price" fxFlex="40" enabled="yes" required="yes"></o-currency-input>
-        </o-row>
-      </o-column>
+          <o-column title-label="product_photo" fxFlex="40">
+            <o-image id="product_photo" label="{{ 'PHOTOTXT' | oTranslate }}" attr="photo" empty-image="assets/images/no-image.png"></o-image>
+          </o-column>
+          <o-column title-label="PRODUCT-NEW" fxFlex>
+            <o-text-input class="input-padding" fxFlex="60" required="yes" attr="name" enabled="yes"></o-text-input>
+            <o-textarea-input class="input-padding" attr="description" fxFlex="60" required="yes" enabled="yes"></o-textarea-input>
+             <o-integer-input min="0" attr="stock" class="input-padding" fxFlex="20" required="yes" enabled="yes"></o-integer-input>
+             <o-currency-input min="0" attr="price" label="Price" fxFlex="20" enabled="yes" required="yes"></o-currency-input>
+          </o-column>
     </o-row>
-    
-</o-form>
+    </o-form>
