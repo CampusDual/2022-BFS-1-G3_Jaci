@@ -21,7 +21,7 @@
         </o-column>
       </o-row>
     </mat-tab>
-    <mat-tab label="{{ 'CLIENTS_FROM_SALES' | oTranslate }}">
+    <mat-tab label="{{'CLIENTS_FROM_SALES' | oTranslate }}">
       <o-table #accountClientsTable attr="salesTable" sort-columns="id:DESC" service="sales" entity="vSalesClients" keys="client_id" parent-keys="sales_id"
       columns="id;name;surname1;surname2;email;bank_account;credit_number" insert-button="no" refresh-button="no"
       visible-columns="id;name;surname1;surname2;email;bank_account;credit_number" query-rows="20"  >
