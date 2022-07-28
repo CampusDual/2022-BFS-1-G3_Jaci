@@ -7,6 +7,7 @@ import { ProductHomeComponent } from './product-home/product-home.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductNewComponent } from './product-new/product-new.component';
 import { ProductChartComponent } from './product-chart/product-chart.component';
+import { OChartModule } from 'ontimize-web-ngx-charts';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ProductChartComponent } from './product-chart/product-chart.component';
   imports: [
     CommonModule,
     ProductRoutingModule,
-    OntimizeWebModule
+    OntimizeWebModule,
+    OChartModule
   ]
 })
 export class ProductModule { }

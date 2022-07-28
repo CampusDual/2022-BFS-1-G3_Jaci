@@ -15,4 +15,5 @@ public interface ISalesService {
 	 public EntityResult salesDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
 	public EntityResult saleChartQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
 	public EntityResult incomeChartQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
+	public EntityResult productChartQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
 }

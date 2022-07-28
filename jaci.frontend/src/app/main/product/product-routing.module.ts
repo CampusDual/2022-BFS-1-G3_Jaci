@@ -15,7 +15,7 @@ const routes: Routes = [{
   component: ProductNewComponent
 },
 {
-  path: "charts",
+  path: "charts/:id",
   component: ProductChartComponent
 },
 {
