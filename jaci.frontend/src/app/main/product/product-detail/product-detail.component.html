@@ -4,30 +4,23 @@
       <mat-icon>bar_chart</mat-icon>
       <span>OPEN PRODUCT CHART</span>
     </button>
-  </div>-->
-    <o-text-input attr="id" label="Id" sql-type="INTEGER" enabled="no"></o-text-input>
+  </div>
+    <o-text-input attr="id" label="Id" sql-type="INTEGER" hidden="true" enabled="no"></o-text-input>
     <o-row>
+      <o-column title-label="product_photo" fxFlex="40">
+        <o-image id="product_photo" label="{{ 'PHOTOTXT' | oTranslate }}" attr="photo" empty-image="assets/images/no-image.png"></o-image>
+      </o-column>
       <o-column title-label="PRODUCT-DETAILS" fxFlex>
-        <o-row>
-          <o-text-input attr="name" label="Name" class="input-padding" fxFlex="40" enabled="yes"></o-text-input>
-        </o-row>
-        <o-row>
-          <o-textarea-input class="input-padding" attr="description" label="Description" fxFlex="40" enabled="yes"></o-textarea-input>
-        </o-row>
-        <o-row>
-          <o-text-input attr="stock" label="Stock" class="input-padding" fxFlex="40" enabled="no"></o-text-input>
-        </o-row>
-        <o-row>
-          <o-currency-input attr="price" label="Price" fxFlex="40" enabled="yes"></o-currency-input>
-        </o-row>
-      </o-column>
-    </o-row>
-    <o-row>
-      <o-column>
-        <o-button-toggle #toggle (onChange)="setSale()" attr="SET_SALE" label="ON SALE" layout-padding></o-button-toggle>     
-      </o-column>
+      <o-text-input attr="name" label="Name" class="input-padding" fxFlex="60" enabled="yes"></o-text-input>
+      <o-textarea-input class="input-padding" attr="description" label="Description" fxFlex="60" enabled="yes"></o-textarea-input>
+    <o-text-input attr="stock" label="Stock" class="input-padding" fxFlex="20" enabled="no"></o-text-input>
+    <o-currency-input attr="price" label="Price" fxFlex="20" enabled="yes"></o-currency-input>
+      <o-button-toggle #toggle (onChange)="setSale()" attr="SET_SALE" label="ON SALE" layout-padding></o-button-toggle>
+    <o-column>
+<o-row>
       <o-column>
         <o-text-input attr="on_sale" type="boolean" style="display:none"></o-text-input>
       </o-column>
-    </o-row>
-</o-form>
+
+
+
