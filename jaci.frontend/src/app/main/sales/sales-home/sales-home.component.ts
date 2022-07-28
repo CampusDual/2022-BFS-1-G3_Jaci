@@ -23,14 +23,13 @@ export class SalesHomeComponent implements OnInit {
 
    createFilter(values: Array<{ attr, value }>): Expression {
       let filters: Array<Expression> = [];
-      var obj = this.todateFormat;
       values.forEach(fil => {
          if (fil.value) {
             if (fil.attr === 'STARTDATE_I') {
-               filters.push(FilterExpressionUtils.buildExpressionMoreEqual('DATE', obj(fil.value)));
+               filters.push(FilterExpressionUtils.buildExpressionMoreEqual('date', fil.value));
             }
             if (fil.attr === 'STARTDATE_E') {
-               filters.push(FilterExpressionUtils.buildExpressionLessEqual('DATE', obj(fil.value)));
+               filters.push(FilterExpressionUtils.buildExpressionLessEqual('date', fil.value));
             }
          }
       });
@@ -40,11 +39,6 @@ export class SalesHomeComponent implements OnInit {
       } else {
          return null;
       }
-   }
-
-   public todateFormat(timeStamp:number): any{
-      var fecha = new Date(timeStamp)
-      return fecha.toLocaleDateString();
    }
 }
 
