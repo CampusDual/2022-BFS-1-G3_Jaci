@@ -45,6 +45,16 @@
             ]]>
             </Sentence>
         </Query>
+        <Query id="CHART_PRODUCT">
+            <Sentence>
+                <![CDATA[
+               SELECT count(*) as sales_id, date
+               FROM sales
+               #WHERE#
+               GROUP BY date
+            ]]>
+            </Sentence>
+        </Query>
         <Query id="SALESCLIENTS">
           <Sentence>
                <![CDATA[

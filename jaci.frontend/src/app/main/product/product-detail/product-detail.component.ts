@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { OButtonToggleComponent, OFormComponent, OIntegerInputComponent } from 'ontimize-web-ngx';
+import { $ } from 'protractor';
 
 @Component({
   selector: 'app-product-detail',
@@ -31,7 +32,8 @@ export class ProductDetailComponent implements OnInit {
   }
 
   openProductChart(){
-    this.router.navigateByUrl('main/products/charts');
+    this.router.navigateByUrl('main/products/charts/'+this.form.getFieldValue("id"));
+    
   }
 
   setSale(){
