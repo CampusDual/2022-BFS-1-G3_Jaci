@@ -6,9 +6,11 @@
     </o-row>
   </o-column-collapsible>
     <div fxFill fxLayout="column" fxLayoutAlign="start">
-    <o-table #table attr="productTable" sort-columns="id:DESC" service="products" entity="{{entity}}" keys="id" columns="name;id;description;stock;price;on_sale" visible-columns="name;description;stock;price;on_sale"
+    <o-table #table attr="productTable" sort-columns="id:DESC" service="products" entity="{{entity}}" keys="id" columns="photo;name;id;description;stock;price;on_sale" visible-columns="photo;name;description;stock;price;on_sale"
      query-rows="20" delete-button="no">
       <o-table-context-menu delete="no"></o-table-context-menu>
+      <o-table-column attr="photo" title="{{ 'PHOTOTXT' | oTranslate }} "title="photo" orderable="no" searchable="no" type="image" avatar="yes"
+      empty-image="assets/images/no-image.png" image-type="base64"></o-table-column>
       <o-table-column attr="name" title="Name" width="200px"></o-table-column>
       <o-table-column attr="description" title="Description" width="800px"></o-table-column>
       <o-table-column attr="stock" title="Stock" width="80px"></o-table-column>
