@@ -35,7 +35,7 @@ export class ProductChartComponent implements OnInit {
     var chartParametersAdapter =
       new LineChartConfiguration();
     chartParametersAdapter.xAxis = "date";
-    chartParametersAdapter.yAxis = ["product_id"];
+    chartParametersAdapter.yAxis = ["sales_id"];
 
 
     this.chartAdapter = new LineDataAdapter(chartParametersAdapter);

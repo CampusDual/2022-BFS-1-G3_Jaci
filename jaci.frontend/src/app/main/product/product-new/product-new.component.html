@@ -4,10 +4,10 @@
             <o-image id="product_photo" label="{{ 'PHOTOTXT' | oTranslate }}" attr="photo" empty-image="assets/images/no-image.png"></o-image>
           </o-column>
           <o-column title-label="PRODUCT-NEW" fxFlex>
-            <o-text-input class="input-padding" fxFlex="60" required="yes" attr="name" enabled="yes"></o-text-input>
-            <o-textarea-input class="input-padding" attr="description" fxFlex="60" required="yes" enabled="yes"></o-textarea-input>
-             <o-integer-input min="0" attr="stock" class="input-padding" fxFlex="60" required="yes" enabled="yes"></o-integer-input>
-             <o-currency-input min="0" attr="price" label="Price" fxFlex="60" enabled="yes" required="yes"></o-currency-input>
+            <o-text-input class="input-padding" fxFlex="60" required="yes" label="Name" attr="name" enabled="yes"></o-text-input>
+            <o-textarea-input class="input-padding" label="Description" attr="description" fxFlex="60" required="yes" enabled="yes"></o-textarea-input>
+             <o-integer-input min="0" label="Stock" attr="stock" class="input-padding" fxFlex="60" required="yes" enabled="yes"></o-integer-input>
+             <o-currency-input min="0" label="Price" attr="price" label="Price" fxFlex="60" enabled="yes" required="yes"></o-currency-input>
           </o-column>
     </o-row>
     </o-form>
