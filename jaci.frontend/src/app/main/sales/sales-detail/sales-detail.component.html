@@ -1,8 +1,8 @@
-<o-form service="sales" entity="sales" keys="sales_id" header-actions="R;I;U;D" show-header-navigation="no">
+<o-form service="sales" entity="sales" keys="sales_id" header-actions="I;U;D" show-header-navigation="no">
   <mat-tab-group fxFlex>
     <mat-tab label="{{ 'SALES_INFORMATION' | oTranslate }}">
       <o-row>
-        <o-column title-label="SALES DETAIL" fxFlex>
+        <o-column title-label="sales details" fxFlex>
           <o-row>
             <o-integer-input attr="sales_id" class="input-padding" step="0" grouping="no" fxFlex="40" sql-type="INTEGER"></o-integer-input>
             <o-integer-input attr="quantity" class="input-padding" step="0" grouping="no" fxFlex="40"></o-integer-input>
