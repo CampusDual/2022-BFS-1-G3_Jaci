@@ -86,5 +86,18 @@
             ]]>
          </Sentence>
       </Query>
+      <Query id="CLIENTSALES">
+          <Sentence>
+               <![CDATA[
+               SELECT
+                  #COLUMNS# 
+               FROM
+                  ${mainschema}.CLIENTS AS CL
+                  INNER JOIN ${mainschema}.SALES AS SA ON SA.CLIENT_ID = CL.ID
+               #WHERE#
+               #ORDER#
+            ]]>
+         </Sentence>
+      </Query>
     </Queries>
 </JdbcEntitySetup>
