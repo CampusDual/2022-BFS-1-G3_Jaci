@@ -1,6 +1,6 @@
 <div fxFill fxLayout="column" fxLayoutAlign="start">
   <o-table attr="workerstable" service="workers" entity="worker" keys="id"
-  delete-button="no"
+  delete-button="no" refresh-button="no"
     columns="id;photo;name;surname1;surname2;startdate;telephone;email"
     visible-columns="photo;name;surname1;surname2;startdate;telephone;email" query-rows="10">
     <o-table-column attr="photo" title="{{ 'PHOTOTXT' | oTranslate }} "title="photo" orderable="no" searchable="no" type="image" avatar="yes"
