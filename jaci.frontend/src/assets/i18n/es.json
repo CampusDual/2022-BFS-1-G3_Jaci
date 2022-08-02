@@ -37,5 +37,6 @@
   "TELEPHONETXT": "Teléfono",
   "EMAILTXT": "Email",
   "BANKACCOUNT": "Cuenta bancaria",
-  "CREDITNUMBER": "Tarjeta de crédito"
+  "CREDITNUMBER": "Tarjeta de crédito",
+  "CLIENTNAME":"Nombre de cliente"
 }
