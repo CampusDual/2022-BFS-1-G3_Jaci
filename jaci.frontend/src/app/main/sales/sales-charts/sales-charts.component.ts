@@ -33,6 +33,7 @@ export class SalesChartsComponent implements OnInit {
     var chartParamatersSalesAdapter = new DiscreteBarChartConfiguration();
      chartParamatersSalesAdapter.xAxis = "date";
      chartParamatersSalesAdapter.yAxis = ["sales_id"];
+     chartParamatersSalesAdapter.showLegend = true;
      this.chartAdapterSales = new DiscreteBarDataAdapter(chartParamatersSalesAdapter);
 
 
