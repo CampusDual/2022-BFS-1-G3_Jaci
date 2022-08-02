@@ -28,6 +28,7 @@
                WHERE
                   current_date - 30 <= date
                GROUP BY date,product_id
+               ORDER BY date
             ]]>
             </Sentence>
         </Query>
