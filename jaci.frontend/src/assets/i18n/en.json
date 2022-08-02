@@ -38,5 +38,6 @@
   "TELEPHONETXT": "Telephone",
   "EMAILTXT": "Email",
   "BANKACCOUNT": "Bank account",
-  "CREDITNUMBER": "Credit number"
+  "CREDITNUMBER": "Credit number",
+  "CLIENTNAME":"Client name"
 }
