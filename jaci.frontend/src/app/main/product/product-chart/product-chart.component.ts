@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { OntimizeService } from 'ontimize-web-ngx';
 import { DiscreteBarChartConfiguration, DiscreteBarDataAdapter, LineChartConfiguration, LineDataAdapter, OChartComponent } from 'ontimize-web-ngx-charts';
 import { ChartAxisConfiguration } from 'ontimize-web-ngx-charts/lib/models/options/ChartAxisConfiguration.class';
@@ -17,7 +17,7 @@ export class ProductChartComponent implements OnInit {
 
   @ViewChild("chart", {static: false}) chart: OChartComponent;
 
-  constructor(private _Activatedroute:ActivatedRoute, private ontimizeService: OntimizeService) {
+  constructor(private _Activatedroute:ActivatedRoute, private ontimizeService: OntimizeService, private router: Router) {
   }
 
   ngOnInit() {
@@ -30,6 +30,10 @@ export class ProductChartComponent implements OnInit {
   //ngAfterViewInit(){
 
   //}
+
+  navigate(){
+    this.router.navigateByUrl("main/products");
+  }
 
   createChart(){
     var chartParametersAdapter =

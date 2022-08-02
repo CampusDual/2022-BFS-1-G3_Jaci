@@ -20,4 +20,6 @@ public interface ISalesService {
 	 public EntityResult vSalesClientsDelete(Map<String, Object> keyValues) throws OntimizeJEERuntimeException;
 	 public EntityResult vSalesProductQuery(Map<String, Object> keysValues, List<String> attributes) throws OntimizeJEERuntimeException;
 	 public EntityResult vSalesProductDelete(Map<String, Object> keyValues) throws OntimizeJEERuntimeException;
+	 public EntityResult vClientSalesQuery(Map<String, Object> keysValues, List<String> attributes) throws OntimizeJEERuntimeException;
+	 public EntityResult vClientSalesDelete(Map<String, Object> keyValues) throws OntimizeJEERuntimeException;
 }

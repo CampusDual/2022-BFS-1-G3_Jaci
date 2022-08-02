@@ -7,10 +7,12 @@
         <o-real-input attr="total" class="input-padding" step="0" grouping="no" fxFlex="40"></o-real-input>
       </o-row>
       <o-row>
-        <o-integer-input attr="product_id" fxFlex></o-integer-input>
+        <o-combo attr="product_id" class="input-padding" fxFlex="50" service="products" entity="product" keys="product_id" columns="name;id" visible-columns="name"
+        visible-columns="name" value-column="id" label="{{ 'PRODUCT_FROM_SALES' | oTranslate }}" ></o-combo>
       </o-row>
       <o-row>
-        <o-integer-input attr="client_id" fxFlex></o-integer-input>
+        <o-combo attr="client_id" class="input-padding" fxFlex="50" service="clients" entity="clients" keys="client_id" columns="id;name"
+        visible-columns="name" value-column="id" label="{{ 'CLIENTNAME' | oTranslate }}"></o-combo>
       </o-row>
       <o-row>
         <o-date-input attr="date" fxFlex="20"></o-date-input>

@@ -10,10 +10,12 @@
             <o-real-input attr="total" class="input-padding" step="0" grouping="no" fxFlex="40"></o-real-input>
           </o-row>
           <o-row>
-            <o-integer-input attr="product_id" fxFlex></o-integer-input>
+            <o-combo attr="product_id" class="input-padding" fxFlex="50" service="products" entity="product" keys="product_id" columns="name;id" visible-columns="name"
+            visible-columns="name" value-column="id" label="{{ 'PRODUCT_FROM_SALES' | oTranslate }}" ></o-combo>
           </o-row>
           <o-row>
-            <o-integer-input attr="client_id" fxFlex></o-integer-input>
+            <o-combo attr="client_id" class="input-padding" fxFlex="50" service="clients" entity="clients" keys="client_id" columns="id;name"
+            visible-columns="name" value-column="id" label="{{ 'CLIENTNAME' | oTranslate }}"></o-combo>
           </o-row>
           <o-row>
             <o-date-input attr="date" fxFlex="20"></o-date-input>
@@ -33,9 +35,11 @@
     </o-table>
     </mat-tab>
     <mat-tab label="{{ 'PRODUCT_FROM_SALES' | oTranslate }}">
-      <o-table #table attr="productTable" sort-columns="id:DESC" service="sales" entity="vSalesProduct" keys="product_id" parent-keys="sales_id" columns="name;id;description;stock;price;on_sale" visible-columns="name;description;stock;price;on_sale"
+      <o-table #table attr="productTable" sort-columns="id:DESC" service="sales" entity="vSalesProduct" keys="product_id" parent-keys="sales_id" columns="photo;name;id;description;stock;price;on_sale" visible-columns="photo;name;description;stock;price;on_sale"
       query-rows="20" delete-button="yes" insert-button="no" refresh-button="no">
        <o-table-context-menu delete="no"></o-table-context-menu>
+       <o-table-column attr="photo" title="{{ 'PHOTOTXT' | oTranslate }}" orderable="no" searchable="no" type="image" avatar="yes"
+       empty-image="assets/images/no-image.png" image-type="base64"  width="100px"></o-table-column>
        <o-table-column attr="name" title="NAME" width="100px"></o-table-column>
        <o-table-column attr="description" title="DESCRIPTION" width="800px"></o-table-column>
        <o-table-column attr="stock" title="STOCK" width="200px"></o-table-column>
