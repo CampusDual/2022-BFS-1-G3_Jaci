@@ -79,5 +79,18 @@ public class SalesService implements ISalesService {
 		 return this.daoHelper.delete(this.salesDao, keyValues);
 
 	}
+	
+	//------------ CHECK SALES FROM CLIENTS --------------------
+
+	@Override
+	public EntityResult vClientSalesQuery(Map<String, Object> keysValues, List<String> attributes)
+			throws OntimizeJEERuntimeException {
+		return this.daoHelper.query(this.salesDao, keysValues, attributes, SalesDao.QUERY_VCLIENTSALES);
+	}
+
+	@Override
+	public EntityResult vClientSalesDelete(Map<String, Object> keyValues) throws OntimizeJEERuntimeException {
+		  return this.daoHelper.delete(this.salesDao, keyValues);
+	}
 
 }
