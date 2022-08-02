@@ -89,7 +89,9 @@ button, html, input, select, span, textarea {
  .o-app-sidenav-menu-item a {
   background-color: #919296;
 }
-
+.o-app-sidenav .o-app-sidenav-sidenav .o-app-sidenav-menu-group-level-1 .o-app-sidenav-menugroup.opened + .o-app-sidenav-menugroup-items-container ul {
+background: #919296;
+}
 /* .o-app-sidenav-menugroup.mat-button {
 background-color: #919296;
 } */
