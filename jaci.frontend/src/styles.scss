@@ -22,6 +22,7 @@ o-app-layout-header{
   font-family: Poppins, "Halimum", "Montserrat classic";
   font-size: 14px;
   font-weight: 400;
+
 }
 Atributo style {
   pointer-events: auto;
@@ -38,7 +39,8 @@ element.style {
   background: #b3b3b5;
 }
 .o-app-header nav {
-  background: #b3b3b5;
+  background: #919296;
+  box-shadow: 3px 0 6px rgb(0 0 0 / 24%);
 }
 .full-page .login-outer-container .wrapp-login .login-inner-container button {
   width: 100%;
@@ -84,4 +86,16 @@ button, html, input, select, span, textarea {
 .input-padding{
   padding-right: 6px;
 }
-
+ .o-app-sidenav-menu-item a {
+  background-color: #919296;
+}
+.o-app-sidenav .o-app-sidenav-sidenav .o-app-sidenav-menu-group-level-1 .o-app-sidenav-menugroup.opened + .o-app-sidenav-menugroup-items-container ul {
+background: #919296;
+}
+/* .o-app-sidenav-menugroup.mat-button {
+background-color: #919296;
+} */
+/* ::-webkit-scrollbar-track {
+  background: #919296;
+}
+ */
