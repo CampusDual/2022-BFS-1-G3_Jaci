@@ -93,4 +93,27 @@ public class SalesService implements ISalesService {
 		  return this.daoHelper.delete(this.salesDao, keyValues);
 	}
 
+	// ------------- COMPLEX ---------------------
+	@Override
+	public EntityResult vSalesComplexQuery(Map<String, Object> keysValues, List<String> attributes)
+			throws OntimizeJEERuntimeException {
+		return this.daoHelper.query(this.salesDao, keysValues, attributes, SalesDao.QUERY_SALESCOMPLEX);
+	}
+
+	@Override
+	public EntityResult vSalesComplexDelete(Map<String, Object> keyValues) throws OntimizeJEERuntimeException {
+		 return this.daoHelper.delete(this.salesDao, keyValues);
+	}
+
+	@Override
+	public EntityResult vSalesComplexUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap)
+			throws OntimizeJEERuntimeException {
+		return this.daoHelper.update(this.salesDao, attrMap, keyMap);
+	}
+
+	@Override
+	public EntityResult vSalesComplexInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException {
+		 return this.daoHelper.insert(this.salesDao, attrMap);
+	}
+
 }

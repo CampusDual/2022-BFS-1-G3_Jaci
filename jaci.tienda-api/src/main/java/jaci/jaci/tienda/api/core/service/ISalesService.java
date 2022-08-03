@@ -22,4 +22,9 @@ public interface ISalesService {
 	 public EntityResult vSalesProductDelete(Map<String, Object> keyValues) throws OntimizeJEERuntimeException;
 	 public EntityResult vClientSalesQuery(Map<String, Object> keysValues, List<String> attributes) throws OntimizeJEERuntimeException;
 	 public EntityResult vClientSalesDelete(Map<String, Object> keyValues) throws OntimizeJEERuntimeException;
+	 public EntityResult vSalesComplexQuery(Map<String, Object> keysValues, List<String> attributes) throws OntimizeJEERuntimeException;
+	 public EntityResult vSalesComplexDelete(Map<String, Object> keyValues) throws OntimizeJEERuntimeException;
+	 public EntityResult vSalesComplexUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
+	 public EntityResult vSalesComplexInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException;
+	 
 }

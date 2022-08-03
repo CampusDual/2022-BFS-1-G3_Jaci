@@ -12,6 +12,7 @@ import com.ontimize.jee.server.dao.jdbc.OntimizeJdbcDaoSupport;
 
 public class SalesDao extends OntimizeJdbcDaoSupport{
 	
+	 public static final String QUERY_SALESCOMPLEX= "SALESCOMPLEX";
 	 public static final String QUERY_VSALESCLIENTS = "SALESCLIENTS";
 	 public static final String QUERY_VCLIENTSALES = "CLIENTSALES";
 	 public static final String QUERY_VSALESPRODUCT = "SALESPRODUCTS";
