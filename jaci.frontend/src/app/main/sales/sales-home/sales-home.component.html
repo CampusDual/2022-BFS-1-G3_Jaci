@@ -1,5 +1,5 @@
 <o-form show-header="no">
-  <o-column-collapsible title="{{ 'DATE FILTERS' | oTranslate }}" appearance="outline">
+  <o-column-collapsible title="{{ 'DATE_FILTERS' | oTranslate }}" appearance="outline">
      <o-row layout-gap="18px">
         <o-column fxFlex="50" title="{{ 'STARTDATE' | oTranslate }}">
            <o-date-input attr="startDate" label="select init date" read-only="no" required="no"></o-date-input>
@@ -12,7 +12,7 @@
         <o-button attr="filter" [oFilterBuilderQuery]="filterBuilder" type="RAISED" label="FILTER"
            class="filter-button">
         </o-button>
-        <o-button attr="clear" [oFilterBuilderClear]="filterBuilder" type="RAISED" label="CLEAR" class="filter-button">
+        <o-button attr="clear" [oFilterBuilderClear]="filterBuilder" type="RAISED" label="Clear" class="filter-button">
         </o-button>
      </o-row>
   </o-column-collapsible>
@@ -26,10 +26,11 @@
 
 <o-form-layout-manager title="{{'SALES' | oTranslate }}" separator=" " mode="tab" label-columns="SALES_ID;QUANTITY;PRICE;TOTAL;CLIENT_ID;CLIENT_ID;DATE;IS_CONFIRM">
 <div fxFill fxLayout="column" fxLayoutAlign="start">
+
   <o-table #salesTable fxFlex attr="salesTable" service="sales" entity="vSalesComplex" keys="sales_id"
     columns="sales_id;NAME_PR;NAME_CL;quantity;price;total;date;is_confirm"
-    visible-columns="sales_id;NAME_PR;NAME_CL;quantity;price;total;date" query-rows="10" delete-button="no">
-    <o-table-button icon = "bar_chart" (onClick)="openSalesCharts()" attr="SALES_CHARTS" label="OPEN SALES CHARTS"></o-table-button>
+    visible-columns="sales_id;NAME_PR;NAME_CL;quantity;price;total;date" query-rows="10" delete-button="no" refresh-button="no">
+    <o-table-button icon = "bar_chart" (onClick)="openSalesCharts()" attr="SALES_CHARTS" label="{{'OPEN_SALE_CHART' | oTranslate }}"></o-table-button>
     <o-table-context-menu delete="no"></o-table-context-menu>
     <o-table-column attr="sales_id" title="Id" width="5%"></o-table-column>
     <o-table-column attr="NAME_PR" title="Product" width="10%"></o-table-column>

@@ -1,8 +1,8 @@
-<o-form #form service="products" entity="product" keys="id" header-actions="R;D;U;" show-header-navigation="no" >
+<o-form #form service="products" entity="product" keys="id" header-actions="D;U;" show-header-navigation="no" >
   <div o-form-toolbar-buttons>
     <button (click)="openProductChart()" attr="PRODUCT_CHART" type="button" class="o-form-toolbar-button" mat-stroked-button>
       <mat-icon>bar_chart</mat-icon>
-      <span>OPEN PRODUCT CHART</span>
+      <span>Open product chart</span>
     </button>
   </div>
     <o-text-input attr="id" label="Id" sql-type="INTEGER" hidden="true" enabled="no"></o-text-input>
@@ -15,7 +15,8 @@
       <o-textarea-input class="input-padding" attr="description" label="Description" fxFlex="60" enabled="yes"></o-textarea-input>
     <o-text-input attr="stock" label="Stock" class="input-padding" fxFlex="60" enabled="no"></o-text-input>
     <o-currency-input attr="price" label="Price" fxFlex="60" enabled="yes"></o-currency-input>
-      <o-button-toggle id="btn-toggle" #toggle (onChange)="setSale()" attr="SET_SALE" label="ON SALE"></o-button-toggle>
+    <p>Change sale status:</p>
+    <o-button-toggle id="btn-toggle" #toggle (onChange)="setSale()" attr="SET_SALE" label="ON SALE"></o-button-toggle>
    <!--  <layout-padding> -->
       <o-column>
 <o-row>

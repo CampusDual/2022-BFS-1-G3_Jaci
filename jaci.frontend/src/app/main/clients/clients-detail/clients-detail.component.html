@@ -1,32 +1,22 @@
-<o-form service="clients" entity="clients" keys="id" title="clientDetails" attr="clientsDetail" header-actions="R;U" show-header-navigation="no" >
-  <mat-tab-group fxFlex>
-    <mat-tab label="{{ 'CLIENT_INFORMATION' | oTranslate }}">
-      <o-text-input attr="id" sql-type="INTEGER" enabled="no" label="{{ 'IDCLIENTS' | oTranslate }}"></o-text-input>
+
+<o-form service="clients" entity="clients" keys="id" header-actions="U" show-header-navigation="no" >
+  <o-text-input attr="id" sql-type="INTEGER" enabled="no" label="{{ 'IDCLIENTS' | oTranslate }}" hidden="true"></o-text-input>
+  <o-row>
+    <o-column title-label="CLIENT_INFORMATION" fxFlex>
       <o-row>
-        <o-column title-label="CLIENT_INFORMATION" fxFlex>
-          <o-row>
-            <o-text-input class="input-padding" attr="name" fxFlex="30" required="yes" label="{{ 'NAMETXT' | oTranslate }}"></o-text-input>
-            <o-text-input class="input-padding" attr="surname1" fxFlex="35" required="yes" label="{{ 'SURNAME1TXT' | oTranslate }}"></o-text-input>
-            <o-text-input class="input-padding" attr="surname2" fxFlex="35" required="yes" label="{{ 'SURNAME2TXT' | oTranslate }}"></o-text-input>
-          </o-row>
-          <o-row>
-            <o-email-input attr="email" fxFlex label="{{ 'EMAILTXT' | oTranslate }}"></o-email-input>
-          </o-row>
-          <o-row>
-            <o-text-input attr="bank_account" class="input-padding" step="0" grouping="no" fxFlex="100" label="{{ 'BANKACCOUNT' | oTranslate }}"></o-text-input>
-          </o-row>
-          <o-row>
-            <o-text-input attr="credit_number" class="input-padding" step="0" grouping="no" fxFlex="100" label="{{ 'CREDITNUMBER' | oTranslate }}"></o-text-input>
-          </o-row>
-        </o-column>
+        <o-text-input class="input-padding" attr="name" fxFlex="30" required="yes" label="{{ 'NAMETXT' | oTranslate }}"></o-text-input>
+       <o-text-input class="input-padding" attr="surname1" fxFlex="35" required="yes" label="{{ 'SURNAME1TXT' | oTranslate }}"></o-text-input>
+        <o-text-input class="input-padding" attr="surname2" fxFlex="35" required="yes" label="{{ 'SURNAME2TXT' | oTranslate }}"></o-text-input>
       </o-row>
-    </mat-tab>
-    <mat-tab label="{{'SALES_FROM_CLIENT' | oTranslate }}">
-      <o-table #salesTable fxFlex attr="salesTable" sort-columns="id:DESC" service="sales" entity="vClientSales" keys="id" parent-keys="id"
-      columns="sales_id;quantity;price;total;product_id;client_id;date;is_confirm"
-      visible-columns="sales_id;quantity;price;total;product_id;date" query-rows="10" delete-button="no">
-      <o-table-column attr="date" title="Date" type="date" format="LL"></o-table-column>
-      </o-table>
-    </mat-tab>
-  </mat-tab-group>
+       <o-row>
+        <o-email-input attr="email" fxFlex="35" label="{{ 'EMAILTXT' | oTranslate }}"></o-email-input>
+      </o-row>
+      <o-row>
+        <o-text-input attr="bank_account" class="input-padding" step="0" grouping="no" fxFlex="35" label="{{ 'BANKACCOUNT' | oTranslate }}"></o-text-input>
+      </o-row>
+      <o-row>
+        <o-text-input attr="credit_number" class="input-padding" step="0" grouping="no" fxFlex="35" label="{{ 'CREDITNUMBER' | oTranslate }}"></o-text-input>
+      </o-row>
+    </o-column>
+  </o-row>
 </o-form>

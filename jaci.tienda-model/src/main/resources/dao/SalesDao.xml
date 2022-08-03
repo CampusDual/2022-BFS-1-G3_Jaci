@@ -22,12 +22,13 @@
             <Sentence>
                 <![CDATA[
                SELECT
-                  date, count(*) as sales_id,product_id
+                  date, count(*) as sales_id
                FROM
                   sales
                WHERE
                   current_date - 30 <= date
-               GROUP BY date,product_id
+               GROUP BY date
+               ORDER BY date
             ]]>
             </Sentence>
         </Query>

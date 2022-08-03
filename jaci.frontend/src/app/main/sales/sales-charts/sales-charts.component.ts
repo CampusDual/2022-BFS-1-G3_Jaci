@@ -1,4 +1,5 @@
 import { Component, Injector, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { OntimizeService } from 'ontimize-web-ngx';
 import { ChartService, DiscreteBarChartConfiguration, DiscreteBarDataAdapter, OChartComponent } from 'ontimize-web-ngx-charts';
 
@@ -18,16 +19,21 @@ export class SalesChartsComponent implements OnInit {
 
   private chartAdapterSales: DiscreteBarDataAdapter;
 
-  constructor(private injector: Injector) {  }
+  constructor(private injector: Injector, private router: Router) {  }
 
   ngOnInit() {
   }
 
 
+  navigate(){
+    this.router.navigateByUrl("main/sales");
+  }
+
   ngAfterViewInit() {
     var chartParamatersSalesAdapter = new DiscreteBarChartConfiguration();
      chartParamatersSalesAdapter.xAxis = "date";
      chartParamatersSalesAdapter.yAxis = ["sales_id"];
+     chartParamatersSalesAdapter.showLegend = true;
      this.chartAdapterSales = new DiscreteBarDataAdapter(chartParamatersSalesAdapter);
 
 

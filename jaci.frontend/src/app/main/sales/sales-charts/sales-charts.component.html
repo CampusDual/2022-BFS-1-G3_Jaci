@@ -1,5 +1,9 @@
-<h2>Last month sales chart</h2>
-<o-chart #chartSales type="discreteBar" x-label="Date" x-data-type="time" y-label="Sales" service="sales" entity="saleChart" x-axis="date" y-axis="sales_id"></o-chart>
-<hr>
-<h2>Gross income</h2>
-<o-chart type="line" x-label="Time" y-label="Amount (€)" entity="incomeChart" service="sales" x-axis="date" y-axis="price" x-data-type="time"></o-chart>
+<o-button label="BACK" (onClick)="navigate()"></o-button>
+<div id="leftChart">
+    <h2>Last month sales chart</h2>
+    <o-chart #chartSales chart-width="700px" chart-height="500px" type="discreteBar" x-label="Date" x-data-type="time" y-label="Sales" service="sales" entity="saleChart" x-axis="date" y-axis="sales_id"></o-chart>
+</div>
+<div id="rightChart">
+    <h2>Gross income</h2>
+    <o-chart chart-width="700px" chart-height="500px" type="line" x-label="Time" y-label="Amount (€)" entity="incomeChart" service="sales" x-axis="date" y-axis="price" x-data-type="time"></o-chart>
+</div>
