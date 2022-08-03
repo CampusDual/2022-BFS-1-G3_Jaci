@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { OFormComponent } from 'ontimize-web-ngx';
 
 @Component({
   selector: 'app-sales-new',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SalesNewComponent implements OnInit {
 
+  @ViewChild('form', { static: false }) salesform: OFormComponent;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  calculateTotal(){
+    let num1 = this.salesform.getFieldValue("price");
+    let num2 = this.salesform.getFieldValue("quantity");
+    if(num1 > 0 && num2 > 0){
+      this.salesform.setFieldValue("total", num1*num2);
+    }else{
+      this.salesform.setFieldValue("total", 0);
+    }
+    console.log(num1);
+    console.log(num2);
   }
 
 }

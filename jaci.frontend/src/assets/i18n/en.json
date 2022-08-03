@@ -44,5 +44,6 @@
   "STARTDATE": "Start date",
   "ENDDATE": "End date",
   "SALES": "Sales",
-  "CLIENTS": "Clients"
+  "CLIENTS": "Clients",
+  "OPEN_SALE_CHART": "Open sale chart"
 }

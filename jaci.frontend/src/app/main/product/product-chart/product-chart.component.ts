@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { OntimizeService } from 'ontimize-web-ngx';
-import { DiscreteBarChartConfiguration, DiscreteBarDataAdapter, LineChartConfiguration, LineDataAdapter, OChartComponent } from 'ontimize-web-ngx-charts';
+import { ChartMarginConfiguration, DiscreteBarChartConfiguration, DiscreteBarDataAdapter, LineChartConfiguration, LineDataAdapter, OChartComponent } from 'ontimize-web-ngx-charts';
 import { ChartAxisConfiguration } from 'ontimize-web-ngx-charts/lib/models/options/ChartAxisConfiguration.class';
 
 @Component({
@@ -27,9 +27,13 @@ export class ProductChartComponent implements OnInit {
         });
   }
 
-  //ngAfterViewInit(){
-
-  //}
+  // ngAfterViewInit(){
+  //   var chartParametersAdapter =
+  //     new LineChartConfiguration();
+  //   chartParametersAdapter.xLabel = "Date";
+  //   chartParametersAdapter.yLabel = "Sales count";
+  //   this.chart.setChartConfiguration(chartParametersAdapter);
+  // }
 
   navigate(){
     this.router.navigateByUrl("main/products");
@@ -40,8 +44,9 @@ export class ProductChartComponent implements OnInit {
       new LineChartConfiguration();
     chartParametersAdapter.xAxis = "date";
     chartParametersAdapter.yAxis = ["sales_id"];
-
-
+    chartParametersAdapter.xLabel = "Date";
+    chartParametersAdapter.yLabel = "Sales count";
+    
     this.chartAdapter = new LineDataAdapter(chartParametersAdapter);
 
 

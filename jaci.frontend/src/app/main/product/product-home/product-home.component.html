@@ -1,8 +1,8 @@
 <o-form-layout-manager title="Products" separator=" " mode="tab" label-columns="name">
   <o-column-collapsible title="FILTER" appearance="outline">
-    <o-row layout-align="end" layout-gap="20px">
-      <o-button (onClick)="applyFilter()" attr="APPLY_FILTER" label="Stock less than 5" layout-padding></o-button>
-      <o-button (onClick)="clearFilter()" attr="CLEAR_FILTER" label="Clear filter" layout-padding></o-button>
+    <o-row layout-align="first" layout-gap="20px">
+      <o-button class="leftAlign" (onClick)="applyFilter()" attr="APPLY_FILTER" label="Stock less than 5" layout-padding></o-button>
+      <o-button class="leftAlign" (onClick)="clearFilter()" attr="CLEAR_FILTER" label="Clear filter" layout-padding></o-button>
     </o-row>
   </o-column-collapsible>
     <div fxFill fxLayout="column" fxLayoutAlign="start">
@@ -11,11 +11,11 @@
       <o-table-context-menu delete="no"></o-table-context-menu>
       <o-table-column attr="photo" title="{{ 'PHOTOTXT' | oTranslate }}" orderable="no" searchable="no" type="image" avatar="yes"
       empty-image="assets/images/no-image.png" image-type="base64"  width="100px"></o-table-column>
-      <o-table-column attr="name" title="Name" width="100px"></o-table-column>
-      <o-table-column attr="description" title="Description" width="200px"></o-table-column>
-      <o-table-column attr="stock" title="Stock" width="80px"></o-table-column>
-      <o-table-column attr="price" title="Price" width="80px" type="currency" currency-symbol="€" currency-symbol-position="right"></o-table-column>
-      <o-table-column attr="on_sale" title="On sale" width="80px" type="boolean" render-true-value="YES" render-false-value="NO"></o-table-column>
+      <o-table-column attr="name" title="Name" width="100px" content-align="center"></o-table-column>
+      <o-table-column attr="description" title="Description" width="200px" content-align="center"></o-table-column>
+      <o-table-column attr="stock" title="Stock" width="80px" content-align="center"></o-table-column>
+      <o-table-column attr="price" title="Price" width="80px" type="currency" currency-symbol="€" currency-symbol-position="right" content-align="center"></o-table-column>
+      <o-table-column attr="on_sale" title="On sale" width="80px" type="boolean" render-true-value="YES" render-false-value="NO" content-align="center"></o-table-column>
     </o-table>
   </div>
 </o-form-layout-manager>

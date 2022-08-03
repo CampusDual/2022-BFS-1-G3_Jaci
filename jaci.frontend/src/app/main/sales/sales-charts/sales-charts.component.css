@@ -1,3 +1,13 @@
 h2{
     margin-left: 20px;
+    
+}
+#leftChart{
+    float:left;
+}
+#rightChart{
+    float:right;
+}
+o-button{
+    float:left;
 }

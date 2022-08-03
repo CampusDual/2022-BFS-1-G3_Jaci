@@ -1,10 +1,12 @@
-<o-form service="sales" entity="sales" keys="sales_id" header-actions="R;I;U;D" show-header-navigation="no">
+<o-form #form attr="salesDetails" service="sales" entity="sales" keys="sales_id" header-actions="R;I;U;D" show-header-navigation="no">
   <o-row>
     <o-column title-label="SALES NEW" fxFlex>
       <o-row>
-        <o-integer-input attr="quantity" class="input-padding" step="0" grouping="no" fxFlex="40"></o-integer-input>
-        <o-real-input attr="price" class="input-padding" step="0" grouping="no" fxFlex="40"></o-real-input>
-        <o-real-input attr="total" class="input-padding" step="0" grouping="no" fxFlex="40"></o-real-input>
+        <o-integer-input attr="quantity" class="input-padding" step="0" grouping="no" fxFlex="40" (onChange)="calculateTotal()" required="yes" min="0"></o-integer-input>
+        <o-real-input attr="price" class="input-padding" step="0" grouping="no" fxFlex="40" (onChange)="calculateTotal()" required="yes" min-decimal-digits="2"
+        max-decimal-digits="2" min="0"></o-real-input>
+        <o-real-input attr="total" class="input-padding" step="0" grouping="no" fxFlex="40" read-only="yes" min-decimal-digits="2"
+        max-decimal-digits="2" min="0"></o-real-input>
       </o-row>
       <o-row>
         <o-combo attr="product_id" class="input-padding" fxFlex="50" service="products" entity="product" keys="product_id" columns="name;id" visible-columns="name"
