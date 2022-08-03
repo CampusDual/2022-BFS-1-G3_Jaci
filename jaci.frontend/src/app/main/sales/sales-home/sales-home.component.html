@@ -26,19 +26,19 @@
 
 <o-form-layout-manager title="{{'SALES' | oTranslate }}" separator=" " mode="tab" label-columns="SALES_ID;QUANTITY;PRICE;TOTAL;CLIENT_ID;CLIENT_ID;DATE;IS_CONFIRM">
 <div fxFill fxLayout="column" fxLayoutAlign="start">
-  <o-table #salesTable fxFlex attr="salesTable" service="sales" entity="sales" keys="sales_id"
-    columns="sales_id;quantity;price;total;product_id;client_id;date;is_confirm"
-    visible-columns="sales_id;quantity;price;total;product_id;client_id;date" query-rows="10" delete-button="no">
+  <o-table #salesTable fxFlex attr="salesTable" service="sales" entity="vSalesComplex" keys="sales_id"
+    columns="sales_id;NAME_PR;NAME_CL;quantity;price;total;date;is_confirm"
+    visible-columns="sales_id;NAME_PR;NAME_CL;quantity;price;total;date" query-rows="10" delete-button="no">
     <o-table-button icon = "bar_chart" (onClick)="openSalesCharts()" attr="SALES_CHARTS" label="OPEN SALES CHARTS"></o-table-button>
     <o-table-context-menu delete="no"></o-table-context-menu>
-    <o-table-column attr="sales_id" title="Id" width="50px"></o-table-column>
-    <o-table-column attr="quantity" title="Quantity" width="150px"></o-table-column>
-    <o-table-column attr="price" title="Price" width="100px"></o-table-column>
-    <o-table-column attr="total" title="Total" width="100px"></o-table-column>
-    <o-table-column attr="product_id" title="Product" width="150px"></o-table-column>
-    <o-table-column attr="client_id" title="Client" width="150px"></o-table-column>
-    <o-table-column attr="date" title="Date" type="date" format="LL"></o-table-column>
-    <o-table-column attr="is_confirm" title="IS_CONFIRM" width="150px"></o-table-column>
+    <o-table-column attr="sales_id" title="Id" width="5%"></o-table-column>
+    <o-table-column attr="NAME_PR" title="Product" width="10%"></o-table-column>
+    <o-table-column attr="NAME_CL" title="Client" width="10%"></o-table-column>
+    <o-table-column attr="quantity" title="Quantity" width="10%"></o-table-column>
+    <o-table-column attr="price" title="Price" width="7%"></o-table-column>
+    <o-table-column attr="total" title="Total" width="7%"></o-table-column>
+    <o-table-column attr="date" title="Date" type="date" format="LL" width="10%"></o-table-column>
+    <o-table-column attr="is_confirm" title="IS_CONFIRM" width="10%"></o-table-column>
   </o-table>
 </div>
 </o-form-layout-manager>

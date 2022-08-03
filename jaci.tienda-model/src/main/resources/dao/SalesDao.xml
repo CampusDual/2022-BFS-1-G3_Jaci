@@ -99,5 +99,27 @@
             ]]>
          </Sentence>
       </Query>
+       <Query id="SALESCOMPLEX">
+      <AmbiguousColumns>
+               <AmbiguousColumn name="ID" prefix="PR" databaseName="id" />
+               <AmbiguousColumn name="ID" prefix="CL" databaseName="id" />
+               <AmbiguousColumn name="PRICE" prefix="PR" databaseName="price" />
+               <AmbiguousColumn name="PRICE" prefix="SA" databaseName="price" />
+               <AmbiguousColumn name="NAME_PR" prefix="PR" databaseName="name" />
+               <AmbiguousColumn name="NAME_CL" prefix="CL" databaseName="name" />
+           </AmbiguousColumns>
+          <Sentence>
+               <![CDATA[
+               SELECT
+                  #COLUMNS# 
+               FROM
+                  ${mainschema}.SALES AS SA
+                  INNER JOIN ${mainschema}.PRODUCT AS PR ON SA.PRODUCT_ID = PR.ID
+                  INNER JOIN ${mainschema}.CLIENTS AS CL ON SA.CLIENT_ID = CL.ID
+               #WHERE#
+               #ORDER#
+            ]]>
+         </Sentence>
+      </Query>
     </Queries>
 </JdbcEntitySetup>
