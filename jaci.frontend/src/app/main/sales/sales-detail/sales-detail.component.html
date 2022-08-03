@@ -55,11 +55,11 @@
          <o-table-context-menu delete="no"></o-table-context-menu>
          <o-table-column attr="photo" title="{{ 'PHOTOTXT' | oTranslate }}" orderable="no" searchable="no" type="image" avatar="yes"
          empty-image="assets/images/no-image.png" image-type="base64"  width="100px"></o-table-column>
-         <o-table-column attr="name" title="NAME" width="100px"></o-table-column>
-         <o-table-column attr="description" title="DESCRIPTION" width="800px"></o-table-column>
-         <o-table-column attr="stock" title="STOCK" width="200px"></o-table-column>
-         <o-table-column attr="price" title="PRICE" width="20px" type="currency" currency-symbol="€" currency-symbol-position="right"></o-table-column>
-         <o-table-column attr="on_sale" title="ON SALE" width="60px" type="boolean" render-true-value="YES" render-false-value="NO"></o-table-column>
+         <o-table-column attr="name" title="NAME" width="100px" content-align="center"></o-table-column>
+         <o-table-column attr="description" title="DESCRIPTION" content-align="center"></o-table-column>
+         <o-table-column attr="stock" title="STOCK" width="100px" content-align="center"></o-table-column>
+         <o-table-column attr="price" title="PRICE" width="100px" type="currency" currency-symbol="€" currency-symbol-position="right" content-align="center"></o-table-column>
+         <o-table-column attr="on_sale" title="ON SALE" width="100px" type="boolean" render-true-value="YES" render-false-value="NO" content-align="center"></o-table-column>
        </o-table>
       </mat-tab>
     </mat-tab-group>
