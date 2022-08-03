@@ -92,10 +92,32 @@ button, html, input, select, span, textarea {
 .o-app-sidenav .o-app-sidenav-sidenav .o-app-sidenav-menu-group-level-1 .o-app-sidenav-menugroup.opened + .o-app-sidenav-menugroup-items-container ul {
 background: #919296;
 }
-/* .o-app-sidenav-menugroup.mat-button {
-background-color: #919296;
-} */
-/* ::-webkit-scrollbar-track {
-  background: #919296;
+.mat-stroked-button:not([disabled]) {
+  border-color: rgba(0, 0, 0,0.26);
 }
- */
+/* .o-home-menu-layout-scrolling {
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  overflow-y: hidden;
+} */
+.o-card-menu-item-image-container{
+  flex-direction: column;
+  box-sizing: border-box;
+  display: flex;
+  place-content: center;
+  align-items: center;
+  flex: 1 1 100%;
+  max-height: 80%;
+  min-height: 135px;
+}
+.o-menu-layout .o-card-menu-item{
+  height: 45%;
+  margin-bottom: 12px;
+  max-width: 300px;
+  min-width: 300px;
+  max-height: 270px;
+  min-height: 270px;
+}
+
+
