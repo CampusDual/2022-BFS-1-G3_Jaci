@@ -43,5 +43,6 @@
   "STARTDATE": "Fecha de inicio",
   "ENDDATE":  "Fecha de finalización",
   "SALES": "Ventas",
-  "CLIENTS": "Clientes"
+  "CLIENTS": "Clientes",
+  "OPEN_SALE_CHART": "Abrir gráficos de ventas"
 }
