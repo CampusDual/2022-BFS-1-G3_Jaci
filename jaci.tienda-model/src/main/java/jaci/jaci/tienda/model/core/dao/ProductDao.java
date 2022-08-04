@@ -16,7 +16,6 @@ import com.ontimize.jee.server.dao.jdbc.OntimizeJdbcDaoSupport;
 public class ProductDao extends OntimizeJdbcDaoSupport {
 
     public static final String ATTR_ID            = "ID";
-    public static final String ATTR_PHOTO         = "PHOTO";
     public static final String ATTR_DESCRIPTION   = "DESCRIPTION";
     public static final String ATTR_STOCK         = "STOCK";
     public static final String ATTR_PRICE         = "PRICE";
