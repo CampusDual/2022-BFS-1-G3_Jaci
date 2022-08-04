@@ -4,7 +4,7 @@
         <o-row>
           <o-column title-label="sales details" fxFlex>
             <o-row>
-              <o-integer-input attr="sales_id" class="input-padding" step="0" grouping="no" fxFlex="40" sql-type="INTEGER"></o-integer-input>
+              <o-integer-input attr="sales_id" class="input-padding" step="0" grouping="no" fxFlex="40" sql-type="INTEGER" hidden="true"></o-integer-input>
               <o-integer-input attr="quantity" class="input-padding" step="0" grouping="no" fxFlex="40" (onChange)="calculateTotal()" required="yes" min="0"></o-integer-input>
               <o-real-input attr="price" class="input-padding" step="0" grouping="no" fxFlex="40" (onChange)="calculateTotal()" required="yes" min-decimal-digits="2"
               max-decimal-digits="2" min="0"></o-real-input>

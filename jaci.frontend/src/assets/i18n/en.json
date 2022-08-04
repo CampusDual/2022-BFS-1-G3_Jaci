@@ -26,7 +26,6 @@
   "EMAIL": "Email",
   "BANK_ACCOUNT": "Bank account",
   "CREDIT_NUMBER": "Credit number",
-  "FOOTER_RIGHTS": "All rights reserved",
   "SALES_INFORMATION": "Sales information",
   "CLIENTS_FROM_SALES": "Client from the sale",
   "PRODUCT_FROM_SALES": "Product from sale",
@@ -45,5 +44,8 @@
   "ENDDATE": "End date",
   "SALES": "Sales",
   "CLIENTS": "Clients",
-  "OPEN_SALE_CHART": "Open sale chart"
+  "OPEN_SALE_CHART": "Open sale chart",
+  "CATALOG": "Catalogue",
+  "DESCRIPTION": "Description",
+  "PRICE": "Price"
 }

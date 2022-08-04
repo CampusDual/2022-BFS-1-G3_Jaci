@@ -44,5 +44,8 @@
   "ENDDATE":  "Fecha de finalización",
   "SALES": "Ventas",
   "CLIENTS": "Clientes",
-  "OPEN_SALE_CHART": "Abrir gráficos de ventas"
+  "OPEN_SALE_CHART": "Abrir gráficos de ventas",
+  "CATALOG": "Catálogo",
+  "DESCRIPTION": "Descripción",
+  "PRICE": "Precio"
 }
