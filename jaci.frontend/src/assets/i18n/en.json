@@ -45,5 +45,17 @@
   "ENDDATE": "End date",
   "SALES": "Sales",
   "CLIENTS": "Clients",
-  "OPEN_SALE_CHART": "Open sale chart"
+  "OPEN_SALE_CHART": "Open sale chart",
+  "DESCRIPTION": "Description",
+  "STOCK": "Stock",
+  "PRICE": "Price",
+  "ON_SALE": "On sale",
+  "PRODUCT_DETAILS": "Product details",
+  "CHANGE_SALE_STATUS": "Change sale status:",
+  "BACK": "Back",
+  "PRODUCTS": "Products",
+  "FILTER": "Filter",
+  "LESS_5": "Stock less than 5",
+  "CLEAR_FILTER": "Clear filter",
+  "PRODUCT_PHOTO": "Product photo"
 }
