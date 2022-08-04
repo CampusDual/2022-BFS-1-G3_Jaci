@@ -43,7 +43,7 @@ export class ProductChartComponent implements OnInit {
     var chartParametersAdapter =
       new LineChartConfiguration();
     chartParametersAdapter.xAxis = "date";
-    chartParametersAdapter.yAxis = ["sales_id"];
+    chartParametersAdapter.yAxis = ["sales"];
     chartParametersAdapter.xLabel = "Date";
     chartParametersAdapter.yLabel = "Sales count";
     
@@ -59,7 +59,7 @@ export class ProductChartComponent implements OnInit {
       'product_id': this.productId
     };
 
-    let columns = ['date', 'product_id'];
+    let columns = ['date', 'sales'];
     service.query(filter, columns, 'productChart',{'product_id':4}).subscribe((resp) => {
       // response ok
       if (resp.code === 0) {
