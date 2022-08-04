@@ -11,7 +11,6 @@ $loader-circle3: #f9c922; */
   height: 100%;
   z-index: 1000;
 }
-
 #loader-wrapper .loader-section {
   position: fixed;
   top: 0;

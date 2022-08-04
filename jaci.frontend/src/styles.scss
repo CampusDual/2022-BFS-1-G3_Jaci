@@ -93,6 +93,16 @@ button, html, input, select, span, textarea {
 background: #919296;
 }
 
+.mat-stroked-button:not([disabled]) {
+  border-color: rgba(0, 0, 0,0.26);
+}
+ /* .o-home-menu-layout-scrolling {
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  overflow-y: hidden;
+} */
+
 .o-card-menu-item-image-container{
   flex-direction: column;
   box-sizing: border-box;
