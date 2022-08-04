@@ -32,7 +32,9 @@
     visible-columns="photo;NAME_PR;NAME_CL;quantity;price;total;date" query-rows="10" delete-button="no" refresh-button="no">
     <o-table-button icon = "bar_chart" (onClick)="openSalesCharts()" attr="SALES_CHARTS" label="{{'OPEN_SALE_CHART' | oTranslate }}"></o-table-button>
     <o-table-context-menu delete="no"></o-table-context-menu>
-    <o-table-column attr="sales_id" title="Id" width="5%" content-align="center"></o-table-column>
+    <o-table-column attr="photo" title="{{ 'PHOTOTXT' | oTranslate }}" orderable="no" searchable="no" type="image" avatar="yes"
+    empty-image="assets/images/no-image.png" image-type="base64"  width="5%"></o-table-column>
+    <!-- <o-table-column attr="sales_id" title="Id" width="5%" content-align="center"></o-table-column> -->
     <o-table-column attr="NAME_PR" title="Product" width="10%" content-align="center"></o-table-column>
     <o-table-column attr="NAME_CL" title="Client" width="10%" content-align="center"></o-table-column>
     <o-table-column attr="quantity" title="Quantity" width="10%" content-align="center"></o-table-column>
