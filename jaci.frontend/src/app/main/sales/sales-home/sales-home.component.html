@@ -34,13 +34,14 @@
     <o-table-context-menu delete="no"></o-table-context-menu>
     <o-table-column attr="photo" title="{{ 'PHOTOTXT' | oTranslate }}" orderable="no" searchable="no" type="image" avatar="yes"
     empty-image="assets/images/no-image.png" image-type="base64"  width="5%"></o-table-column>
-    <o-table-column attr="NAME_PR" title="Product" width="10%"></o-table-column>
-    <o-table-column attr="NAME_CL" title="Client" width="10%"></o-table-column>
-    <o-table-column attr="quantity" title="Quantity" width="10%"></o-table-column>
-    <o-table-column attr="price" title="Price" width="7%"></o-table-column>
-    <o-table-column attr="total" title="Total" width="7%"></o-table-column>
-    <o-table-column attr="date" title="Date" type="date" format="LL" width="10%"></o-table-column>
-    <o-table-column attr="is_confirm" title="IS_CONFIRM" width="10%"></o-table-column>
+    <o-table-column attr="sales_id" title="Id" width="5%" content-align="center"></o-table-column>
+    <o-table-column attr="NAME_PR" title="Product" width="10%" content-align="center"></o-table-column>
+    <o-table-column attr="NAME_CL" title="Client" width="10%" content-align="center"></o-table-column>
+    <o-table-column attr="quantity" title="Quantity" width="10%" content-align="center"></o-table-column>
+    <o-table-column attr="price" title="Price" width="7%" type="currency" currency-symbol="€" currency-symbol-position="right" content-align="center"></o-table-column>
+    <o-table-column attr="total" title="Total" width="7%" type="currency" currency-symbol="€" currency-symbol-position="right" content-align="center"></o-table-column>
+    <o-table-column attr="date" title="Date" type="date" format="LL" width="10%" content-align="center"></o-table-column>
+    <o-table-column attr="is_confirm" title="IS_CONFIRM" width="10%" content-align="center"></o-table-column>
   </o-table>
 </div>
 </o-form-layout-manager>

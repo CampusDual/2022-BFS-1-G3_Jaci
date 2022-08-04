@@ -1,0 +1,13 @@
+.o-button button {
+  border-radius: 0;
+    box-shadow: none;
+    background-color: #818183;
+    opacity: 1;
+}
+/* .o-button button.mat-stroked-button {
+  border-radius: 0;
+    box-shadow: none;
+    background-color: #818183;
+    opacity: 1;
+} */
+

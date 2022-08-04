@@ -47,5 +47,15 @@
   "OPEN_SALE_CHART": "Abrir gráficos de ventas",
   "CATALOG": "Catálogo",
   "DESCRIPTION": "Descripción",
-  "PRICE": "Precio"
+  "STOCK": "Stock",
+  "PRICE": "Precio",
+  "ON_SALE": "En venta",
+  "PRODUCT_DETAILS": "Detalles de productos",
+  "CHANGE_SALE_STATUS": "Cambiar estado de venta:",
+  "BACK": "Atrás",
+  "PRODUCTS": "Productos",
+  "FILTER": "Filtro",
+  "LESS_5": "Stock menos que 5",
+  "CLEAR_FILTER": "Limpiar filtro",
+  "PRODUCT_PHOTO": "Imagen del producto"
 }

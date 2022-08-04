@@ -2,21 +2,21 @@
   <div o-form-toolbar-buttons>
     <button (click)="openProductChart()" attr="PRODUCT_CHART" type="button" class="o-form-toolbar-button" mat-stroked-button>
       <mat-icon>bar_chart</mat-icon>
-      <span>Open product chart</span>
+      <span>{{ 'OPEN_PRODUCT_CHART' | oTranslate }}</span>
     </button>
   </div>
     <o-text-input attr="id" label="Id" sql-type="INTEGER" hidden="true" enabled="no"></o-text-input>
     <o-row>
-      <o-column title-label="product_photo" fxFlex="50">
+      <o-column title="{{ 'PRODUCT_PHOTO' | oTranslate }}" fxFlex="50">
         <o-image id="product_photo" label="{{ 'PHOTOTXT' | oTranslate }}" attr="photo" empty-image="assets/images/no-image.png"></o-image>
       </o-column>
-      <o-column title-label="PRODUCT-DETAILS" fxFlex>
-      <o-text-input attr="name" label="Name" class="input-padding" fxFlex="60" enabled="yes"></o-text-input>
-      <o-textarea-input class="input-padding" attr="description" label="Description" fxFlex="60" enabled="yes"></o-textarea-input>
-    <o-text-input attr="stock" label="Stock" class="input-padding" fxFlex="60" enabled="no"></o-text-input>
-    <o-currency-input attr="price" label="Price" fxFlex="60" enabled="yes"></o-currency-input>
-    <p>Change sale status:</p>
-    <o-button-toggle id="btn-toggle" #toggle (onChange)="setSale()" attr="SET_SALE" label="ON SALE"></o-button-toggle>
+      <o-column title="{{ 'PRODUCT_DETAILS' | oTranslate }}" fxFlex>
+      <o-text-input attr="name" label="{{ 'NAME' | oTranslate }}" class="input-padding" fxFlex="60" enabled="yes"></o-text-input>
+      <o-textarea-input class="input-padding" attr="description" label="{{ 'DESCRIPTION' | oTranslate }}" fxFlex="60" enabled="yes"></o-textarea-input>
+    <o-text-input attr="stock" label="{{ 'STOCK' | oTranslate }}" class="input-padding" fxFlex="60" enabled="no"></o-text-input>
+    <o-currency-input attr="price" label="{{ 'PRICE' | oTranslate }}" fxFlex="60" enabled="yes"></o-currency-input>
+    <p>{{ 'CHANGE_SALE_STATUS' | oTranslate }}</p>
+    <o-button-toggle id="btn-toggle" #toggle (onChange)="setSale()" attr="SET_SALE" label="{{ 'ON_SALE' | oTranslate }}"></o-button-toggle>
    <!--  <layout-padding> -->
       <o-column>
 <o-row>

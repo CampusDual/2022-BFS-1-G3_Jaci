@@ -3,13 +3,13 @@
       <o-table #accountClientsTable attr="clientsTable" service="clients" entity="clients" keys="id" refresh-button="no"
       columns="id;name;surname1;surname2;email;bank_account;credit_number"
       visible-columns="id;name;surname1;surname2;email;bank_account;credit_number" query-rows="20" detail-mode="dblclick" >
-      <o-table-column attr="id" title="{{ 'IDCLIENTS' | oTranslate }}" width="100px" sql-type="INTEGER"></o-table-column>
-      <o-table-column attr="name" title="{{ 'NAME' | oTranslate }}" title="name" width="100px"></o-table-column>
-      <o-table-column attr="surname1" title="{{ 'SURNAME1' | oTranslate }}" title="surname1" width="100px"></o-table-column>
-      <o-table-column attr="surname2" title="{{ 'SURNAME2' | oTranslate }}" title="surname2" width="100px"></o-table-column>
-      <o-table-column attr="email" title="{{ 'EMAIL' | oTranslate }}" title="email" width="100px"></o-table-column>
-      <o-table-column attr="bank_account" title="{{ 'BANK_ACCOUNT' | oTranslate }}" title="bank_account" width="100px"></o-table-column>
-      <o-table-column attr="credit_number" title="{{ 'CREDIT_NUMBER' | oTranslate }}" title="credit_number" width="100px"></o-table-column>
+      <o-table-column attr="id" title="{{ 'IDCLIENTS' | oTranslate }}" width="100px" sql-type="INTEGER" content-align="center"></o-table-column>
+      <o-table-column attr="name" title="{{ 'NAME' | oTranslate }}" title="name" width="100px" content-align="center"></o-table-column>
+      <o-table-column attr="surname1" title="{{ 'SURNAME1' | oTranslate }}" title="surname1" width="100px" content-align="center"></o-table-column>
+      <o-table-column attr="surname2" title="{{ 'SURNAME2' | oTranslate }}" title="surname2" width="100px" content-align="center"></o-table-column>
+      <o-table-column attr="email" title="{{ 'EMAIL' | oTranslate }}" title="email" width="100px" content-align="center"></o-table-column>
+      <o-table-column attr="bank_account" title="{{ 'BANK_ACCOUNT' | oTranslate }}" title="bank_account" width="100px" content-align="center"></o-table-column>
+      <o-table-column attr="credit_number" title="{{ 'CREDIT_NUMBER' | oTranslate }}" title="credit_number" width="100px" content-align="center"></o-table-column>
     </o-table>
   </div>
 </o-form-layout-manager>
