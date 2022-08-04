@@ -2,32 +2,3 @@
   <o-card-menu-layout parent-menu-id="views">
   </o-card-menu-layout>
 </div>
-
-<o-form ignore-default-navigation="yes" show-header="false">
-  <div>
-
-    <o-grid #productGrid attr="productGrid" service="products" entity="product" keys="id"
-      columns="photo;name;id;description;stock;price;on_sale"
-      title="{{'CATALOG' | oTranslate}}"
-      col="3" show-page-size="false" orderable="false" quick-filter="false" show-footer="true"
-      controls="false" gutter-size="20px" detail-mode="none" pagination-controls="yes"
-      >
-      <ng-container *ngFor="let list of productGrid.dataArray">
-        <ng-container *ngIf="list.name != null">
-          <o-grid-item>
-            <o-column layout-padding class="container-item">
-              <div (click)="openDetail(list)" fxLayout="column" fxLayoutAlign="space-evenly center" class="mat-elevation-z1">
-                <img [src]="getImageSrc(list.photo)" width="144px" height="200px">
-                <span class="name"><b>{{ list.name }} </b></span>
-                <span class="description"><b>{{'DESCRIPTION'| oTranslate}}: {{ list.description }} </b></span>
-                <span class="price"><b>{{'PRICE'| oTranslate}}: {{ list.price }} </b></span>
-                <o-button attr="stroked1" type="STROKED" label="{{'DETAILS' | oTranslate}}" layout-padding (onClick)="openDetail(list)"></o-button>
-                </div>
-            </o-column>
-          </o-grid-item>
-        </ng-container>
-      </ng-container>
-    </o-grid>
-
-  </div>
-  </o-form>
