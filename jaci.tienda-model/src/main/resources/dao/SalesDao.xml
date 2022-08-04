@@ -50,10 +50,10 @@
         <Query id="CHART_PRODUCT">
             <Sentence>
                 <![CDATA[
-               SELECT count(*) as sales_id, date,product_id
+               SELECT count(*) as sales, date
                FROM sales
                #WHERE#
-               GROUP BY date,product_id
+               GROUP BY date
             ]]>
             </Sentence>
         </Query>
