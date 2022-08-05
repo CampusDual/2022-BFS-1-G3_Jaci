@@ -47,3 +47,15 @@
     }
   }
 }
+
+$white: rgba(255, 255, 255, 0.644);
+$color-one: #1F2124;
+$color-two: #383A3F;
+
+::ng-deep .my-custom-dialog-class {
+  mat-dialog-container {
+    border: 1px solid transparentize($white, 0.5);
+    background-color: whitesmoke;
+    border-radius: 30px;
+  }
+}
