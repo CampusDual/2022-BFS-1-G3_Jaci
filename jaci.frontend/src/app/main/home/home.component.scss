@@ -41,3 +41,17 @@ div.o-card-menu-item-main{
   min-height: 135px;
 }
 
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+
