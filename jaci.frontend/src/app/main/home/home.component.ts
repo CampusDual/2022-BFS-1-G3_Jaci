@@ -35,10 +35,12 @@ export class HomeComponent implements OnInit {
     this.dialog.open(HomeDetailComponent, {
       height: '330px',
       width: '520px',
-      data: data
+      data: data,
+      panelClass: 'my-custom-dialog-class'
     });
   }
 
+  /*
   @HostListener("window:scroll", ['$event'])
   onWindowScroll(event) {
     var reveals = document.querySelectorAll(".reveal");
@@ -57,5 +59,8 @@ export class HomeComponent implements OnInit {
 
     console.log("hola");
   }
+
+  */
 }
+
 
