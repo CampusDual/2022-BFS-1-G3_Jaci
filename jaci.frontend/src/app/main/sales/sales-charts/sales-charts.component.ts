@@ -22,6 +22,7 @@ export class SalesChartsComponent implements OnInit {
   constructor(private injector: Injector, private router: Router) {  }
 
   ngOnInit() {
+    this.getExpPayments();
   }
 
 
